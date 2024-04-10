@@ -1,0 +1,9 @@
+1. install reuquirements and requiremenets2
+2. install ollama applciation 
+
+tn in cmd
+
+1."ollama pull mistral'//run this command
+2. once the download is complete. run "ollama run mistral"
+3. run modelg.py "python modelg.py"//u will get success message in terminal
+4. run the main.py "streamlit run main.py"

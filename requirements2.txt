@@ -1,0 +1,5 @@
+sentence-transformers
+uvicorn
+python-box
+streamlit
+ollama
