@@ -1,25 +1,31 @@
 import streamlit as st
 from ollama import chat
 
-# Function to get response from LLama 2 model
+
 def get_LLama_response(input_text, no_hours, level):
     messages = [
-    {
-        'role': 'user',
-        'content': f"Generate a lesson plan for {no_hours} hours on {input_text} with a difficulty level of {level}. "
-    },
+        {
+            'role': 'user',
+            'content': f"Generate a lesson plan for {no_hours} hours on {input_text} with a difficulty level of {level}. "
+        },
     ]
     response = chat('lessonPlanner', messages=messages)
     return response['message']['content']
 
 
 
+def save_response_to_file(response):
+    with open("generated_plan.txt", "w") as file:
+        file.write(response)
+
 # Streamlit UI
+
+
 def main():
     st.set_page_config(page_title="Generate plan",
-                    page_icon='🤖',
-                    layout='centered',
-                    initial_sidebar_state='collapsed')
+                       page_icon='🤖',
+                       layout='centered',
+                       initial_sidebar_state='collapsed')
 
     st.header("Generate plan 🤖")
 
@@ -33,22 +39,24 @@ def main():
         no_hours = st.text_input('No of hours')
     with col2:
         level = st.selectbox('Difficulty level',
-                            ('beginner', 'intermediate', 'advanced'), index=0)
+                             ('beginner', 'intermediate', 'advanced'), index=0)
 
     submit = st.button("Generate")
 
     # Handling routing to response page
     if submit:
         response = get_LLama_response(input_text, no_hours, level)
+        save_response_to_file(response)  # Save response to file
         st.session_state.response = response
         st.experimental_rerun()
-        # st.experimental_show()
 
     # Displaying response page
     if "response" in st.session_state:
         display_response(st.session_state.response)
 
 # Function to display response page with table
+
+
 def display_response(response):
     st.header("Generated Plan")
     st.write("Below is the response from Mistral model:")
@@ -57,8 +65,12 @@ def display_response(response):
     for i, topic in enumerate(topics, 1):
         topic = topic.strip().replace("*", "")
         if topic.strip():
-         data.append({"Topic": topic.strip(), "Website Link": "https://example.com"})  # Dummy link for now
+            # Dummy link for now
+            data.append({"Topic": topic.strip(),
+                        "Website Link": "https://example.com"})
     st.table(data)
+    return response  # Return the response instead of displaying it directly
+
 
 if __name__ == "__main__":
     main()

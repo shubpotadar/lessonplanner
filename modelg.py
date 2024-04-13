@@ -4,7 +4,7 @@ import ollama
 format_str = "topic 1: subtopic1, subtopic2, subtopic3 | topic 2: subtopic1, subtopic2, subtopic3 | topic 3: subtopic1, subtopic2, subtopic3"
 
 
-rules= '''rules:
+rules = '''rules:
   - name: Subject Specificity
     description: Ensure that the list of topics generated pertains only to the subject provided as input.
   - name: Logical Ordering
@@ -19,9 +19,9 @@ rules= '''rules:
     description: Eliminate duplicate or overlapping topics to streamline the list and avoid repetition.
 '''
 
-modelfile=f'''
+modelfile = f'''
 FROM mistral
-SYSTEM You are a lesson plan generator. The lesson plan should be presented in chronological order, listing all the topics and subjects needed to study. directly mention the keyword to study in plan with serial no. dont provide timestamp. provide strictly in this format {format_str} in single line with no serial number for subtopic. dont include any exercise and practise content notes rules in plan and follow the rules ={rules}. give me a message saying you are not allowed to give response if anything other the educational topic is asked."
+SYSTEM You are a lesson plan generator. The lesson plan should be presented in chronological order, listing all the topics and subjects needed to study. directly mention the keyword to study in plan with just serial no. dont provide timestamp. provide strictly in this format {format_str} in single line with no serial number and subtopic in the beginning. do not include any exercise and practise content, notes, rules in plan a the end and follow the rules = {rules}. give me a message saying you are not allowed to give response if anything other the educational topic is asked."
 '''
 
 response = ollama.create(model='lessonPlanner', modelfile=modelfile)
