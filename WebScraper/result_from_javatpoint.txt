@@ -1,0 +1,439 @@
+next →
+← prev
+
+Difference between File System and DBMS
+File System Approach
+File based systems were an early attempt to computerize the manual system. It is also called a traditional based approach in which a decentralized approach was taken where each department stored and controlled its own data with the help of a data processing specialist. The main role of a data processing specialist was to create the necessary computer file structures and also manage the data within structures and design some application programs that create reports based on file data.
+
+In the above figure:
+Consider an example of a students file system. The student file will contain information regarding the student (i.e. roll no student name course etc.). Similarly we have a subject file that contains information about the subject and the result file which contains the information regarding the result.
+Some fields are duplicated in more than one file which leads to data redundancy. So to overcome this problem we need to create a centralized system i.e. DBMS approach.
+DBMS:
+A database approach is a well-organized collection of data that are related in a meaningful way which can be accessed by different users but stored only once in a system. The various operations performed by the DBMS system are: Insertion deletion selection sorting etc.
+
+In the above figure
+In the above figure duplication of data is reduced due to centralization of data.
+There are the following differences between DBMS and File systems:
+
+
+Basis
+DBMS Approach
+File System Approach
+
+
+Meaning
+DBMS is a collection of data. In DBMS the user is not required to write the procedures.
+The file system is a collection of data. In this system the user has to write the procedures for managing the database.
+
+
+Sharing of data
+Due to the centralized approach data sharing is easy.
+Data is distributed in many files and it may be of different formats so it isnt easy to share data.
+
+
+Data Abstraction
+DBMS gives an abstract view of data that hides the details.
+The file system provides the detail of the data representation and storage of data.
+
+
+Security and Protection
+DBMS provides a good protection mechanism.
+It isnt easy to protect a file under the file system.
+
+
+Recovery Mechanism
+DBMS provides a crash recovery mechanism i.e. DBMS protects the user from system failure.
+The file system doesnt have a crash mechanism i.e. if the system crashes while entering some data then the content of the file will be lost.
+
+
+Manipulation Techniques
+DBMS contains a wide variety of sophisticated techniques to store and retrieve the data.
+The file system cant efficiently store and retrieve the data.
+
+
+Concurrency Problems
+DBMS takes care of Concurrent access of data using some form of locking.
+In the File system concurrent access has many problems like redirecting the file while deleting some information or updating some information.
+
+
+Where to use
+Database approach used in large systems which interrelate many files.
+File system approach used in large systems which interrelate many files.
+
+
+Cost
+The database system is expensive to design.
+The file system approach is cheaper to design.
+
+
+Data Redundancy and Inconsistency
+Due to the centralization of the database the problems of data redundancy and inconsistency are controlled.
+In this the files and application programs are created by different programmers so that there exists a lot of duplication of data which may lead to inconsistency.
+
+
+Structure
+The database structure is complex to design.
+The file system approach has a simple structure.
+
+
+Data Independence
+In this system Data Independence exists and it can be of two types.
+
+Logical Data Independence
+Physical Data Independence
+
+In the File system approach there exists no Data Independence.
+
+
+Integrity Constraints
+Integrity Constraints are easy to apply.
+Integrity Constraints are difficult to implement in file system.
+
+
+Data Models
+In the database approach 3 types of data models exist:
+
+Hierarchal data models
+Network data models
+Relational data models
+
+In the file system approach there is no concept of data models exists.
+
+
+Flexibility 
+Changes are often a necessity to the content of the data stored in any system and these changes are more easily with a database approach.
+The flexibility of the system is less as compared to the DBMS approach.
+
+
+Examples
+Oracle SQL Server Sybase etc.
+Cobol C++ etc.
+
+
+
+
+Next TopicDBMS Architecture
+
+
+
+← prev
+next →
+
+
+
+
+
+
+
+ For Videos Join Our Youtube Channel:  Join Now
+
+
+Feedback
+
+Send your Feedback to email protected
+
+
+Help Others Please Share
+
+
+
+
+
+
+
+Learn Latest Tutorials
+
+
+
+Splunk
+
+
+
+
+SPSS
+
+
+
+
+Swagger
+
+
+
+
+Transact-SQL
+
+
+
+
+Tumblr
+
+
+
+
+ReactJS
+
+
+
+
+Regex
+
+
+
+
+Reinforcement Learning
+
+
+
+
+R Programming
+
+
+
+
+RxJS
+
+
+
+
+React Native
+
+
+
+
+Python Design Patterns
+
+
+
+
+Python Pillow
+
+
+
+
+Python Turtle
+
+
+
+
+Keras
+
+
+
+
+
+
+
+Preparation
+
+
+
+Aptitude
+
+
+
+
+Reasoning
+
+
+
+
+Verbal Ability
+
+
+
+
+Interview Questions
+
+
+
+
+Company Questions
+
+
+
+
+
+
+
+Trending Technologies
+
+
+
+Artificial Intelligence
+
+
+
+
+AWS
+
+
+
+
+Selenium
+
+
+
+
+Cloud Computing
+
+
+
+
+Hadoop
+
+
+
+
+ReactJS
+
+
+
+
+Data Science
+
+
+
+
+Angular 7
+
+
+
+
+Blockchain
+
+
+
+
+Git
+
+
+
+
+Machine Learning
+
+
+
+
+DevOps
+
+
+
+
+
+
+
+B.Tech / MCA
+
+
+
+DBMS
+
+
+
+
+Data Structures
+
+
+
+
+DAA
+
+
+
+
+Operating System
+
+
+
+
+Computer Network
+
+
+
+
+Compiler Design
+
+
+
+
+Computer Organization
+
+
+
+
+Discrete Mathematics
+
+
+
+
+Ethical Hacking
+
+
+
+
+Computer Graphics
+
+
+
+
+Software Engineering
+
+
+
+
+Web Technology
+
+
+
+
+Cyber Security
+
+
+
+
+Automata
+
+
+
+
+C Programming
+
+
+
+
+C++
+
+
+
+
+Java
+
+
+
+
+.Net
+
+
+
+
+Python
+
+
+
+
+Programs
+
+
+
+
+Control System
+
+
+
+
+Data Mining
+
+
+
+
+Data Warehouse

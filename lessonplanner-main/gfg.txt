@@ -1,0 +1,180 @@
+ntroduction of Process Management
+Last Updated : 06 Dec, 2023
+A process is a program in execution. For example, when we write a program in C or C++ and compile it, the compiler creates binary code. The original code and binary code are both programs. When we actually run the binary code, it becomes a process. A process is an ‘active’ entity instead of a program, which is considered a ‘passive’ entity. A single program can create many processes when run multiple times; for example, when we open a .exe or binary file multiple times, multiple instances begin (multiple processes are created). 
+
+Process management includes various tools and techniques such as process mapping, process analysis, process improvement, process automation, and process control. By applying these tools and techniques, organizations can streamline their processes, eliminate waste, and improve productivity. Overall, process management is a critical aspect of modern business operations and can help organizations achieve their goals and stay competitive in today’s rapidly changing marketplace.
+
+What is Process Management?
+If the operating system supports multiple users then services under this are very important. In this regard, operating systems have to keep track of all the completed processes, Schedule them, and dispatch them one after another. However, the user should feel that he has full control of the CPU. Process management refers to the techniques and strategies used by organizations to design, monitor, and control their business processes to achieve their goals efficiently and effectively. It involves identifying the steps involved in completing a task, assessing the resources required for each step, and determining the best way to execute the task.
+
+Process management can help organizations improve their operational efficiency, reduce costs, increase customer satisfaction, and maintain compliance with regulatory requirements. It involves analyzing the performance of existing processes, identifying bottlenecks, and making changes to optimize the process flow.
+
+Some of the systems call in this category are as follows.
+
+ Create a child’s process identical to the parent’s.
+ Terminate a process
+ Wait for a child process to terminate
+ Change the priority of the process
+ Block the process
+ Ready the process
+Dispatch a process
+ Suspend a process
+ Resume a process
+ Delay a process
+ Fork a process
+How Does a Process Look Like in Memory? 
+The process looks like
+
+Process Management
+
+Explanation of Process 
+Text Section: A Process, sometimes known as the Text Section, also includes the current activity represented by the value of the Program Counter. 
+Stack: The stack contains temporary data, such as function parameters, returns addresses, and local variables. 
+Data Section: Contains the global variable. 
+Heap Section: Dynamically memory allocated to process during its run time. 
+Key Components of Process Management
+Below are some key component of process management.
+
+Process mapping: Creating visual representations of processes to understand how tasks flow, identify dependencies, and uncover improvement opportunities.
+Process analysis: Evaluating processes to identify bottlenecks, inefficiencies, and areas for improvement.
+Process redesign: Making changes to existing processes or creating new ones to optimize workflows and enhance performance.
+Process implementation: Introducing the redesigned processes into the organization and ensuring proper execution.
+Process monitoring and control: Tracking process performance, measuring key metrics, and implementing control mechanisms to maintain efficiency and effectiveness.
+Importance of Process Management System
+It is critical to comprehend the significance of process management for any manager overseeing a firm. It does more than just make workflows smooth. Process Management makes sure that every part of business operations moves as quickly as possible.
+
+By implementing business processes management, we can avoid errors caused by inefficient human labor and cut down on time lost on repetitive operations. It also keeps data loss and process step errors at bay. Additionally, process management guarantees that resources are employed effectively, increasing the cost-effectiveness of our company. Process management not only makes business operations better, but it also makes sure that our procedures meet the needs of your clients. This raises income and improves consumer happiness.
+
+Characteristics of a Process
+A process has the following attributes.
+
+Process Id: A unique identifier assigned by the operating system.
+Process State: Can be ready, running, etc.
+CPU registers: Like the Program Counter (CPU registers must be saved and restored when a process is swapped in and out of the CPU)
+Accounts information: Amount of CPU used for process execution, time limits, execution ID, etc
+I/O status information: For example, devices allocated to the process, open files, etc
+CPU scheduling information: For example, Priority (Different processes may have different priorities, for example, a shorter process assigned high priority in the shortest job first scheduling)
+All of the above attributes of a process are also known as the context of the process. Every process has its own process control block(PCB), i.e. each process will have a unique PCB. All of the above attributes are part of the PCB. 
+
+States of Process
+A process is in one of the following states: 
+
+New: Newly Created Process (or) being-created process.
+Ready: After the creation process moves to the Ready state, i.e. the process is ready for execution.
+Run: Currently running process in CPU (only one process at a time can be under execution in a single processor)
+Wait (or Block): When a process requests I/O access.
+Complete (or Terminated): The process completed its execution.
+Suspended Ready: When the ready queue becomes full, some processes are moved to a suspended ready state
+Suspended Block: When the waiting queue becomes full.
+process-states
+
+Context Switching of Process
+The process of saving the context of one process and loading the context of another process is known as Context Switching. In simple terms, it is like loading and unloading the process from the running state to the ready state. 
+
+When Does Context Switching Happen? 
+1. When a high-priority process comes to a ready state (i.e. with higher priority than the running process). 
+2. An Interrupt occurs.
+3. User and kernel-mode switch (It is not necessary though) 
+4. Preemptive CPU scheduling is used. 
+
+Context Switch vs Mode Switch
+A mode switch occurs when the CPU privilege level is changed, for example when a system call is made or a fault occurs. The kernel works in more a privileged mode than a standard user task. If a user process wants to access things that are only accessible to the kernel, a mode switch must occur. The currently executing process need not be changed during a mode switch. A mode switch typically occurs for a process context switch to occur. Only the kernel can cause a context switch. 
+
+CPU-Bound vs I/O-Bound Processes
+A CPU-bound process requires more CPU time or spends more time in the running state. An I/O-bound process requires more I/O time and less CPU time. An I/O-bound process spends more time in the waiting state. 
+
+Process planning is an integral part of the process management operating system. It refers to the mechanism used by the operating system to determine which process to run next. The goal of process scheduling is to improve overall system performance by maximizing CPU utilization, minimizing execution time, and improving system response time. 
+
+Process Scheduling Algorithms
+The operating system can use different scheduling algorithms to schedule processes. Here are some  commonly used timing algorithms: 
+
+First-come, first-served (FCFS): This is the simplest scheduling algorithm, where the process is executed on a first-come, first-served basis. FCFS is non-preemptive, which means that once a process starts executing, it continues until it is finished or waiting for I/O. 
+Shortest Job First (SJF): SJF is a proactive scheduling algorithm that selects the process with the shortest burst time. The burst time is the time a process takes to complete its execution. SJF minimizes the average waiting time of processes.  
+Round Robin (RR): Round Robin is a proactive scheduling algorithm that reserves a fixed amount of time in a round for each process. If a process does not complete its execution within the specified time, it is blocked and added to the end of the queue. RR ensures fair distribution of CPU time to all processes and avoids starvation.  
+Priority Scheduling: This scheduling algorithm assigns priority to each process and the process with the highest priority is executed first. Priority can be set based on process type, importance, or resource requirements.  
+Multilevel queue: This scheduling algorithm divides the ready queue into several separate queues,  each queue having a different priority. Processes are queued based on their priority, and each queue uses its own scheduling algorithm. This scheduling algorithm is useful in scenarios where different types of processes have different priorities.
+Advantages of Process Management
+Improved Efficiency: Process management can help organizations identify bottlenecks and inefficiencies in their processes, allowing them to make changes to streamline workflows and increase productivity.
+Cost Savings: By identifying and eliminating waste and inefficiencies, process management can help organizations reduce costs associated with their business operations.
+Improved Quality: Process management can help organizations improve the quality of their products or services by standardizing processes and reducing errors.
+Increased Customer Satisfaction: By improving efficiency and quality, process management can enhance the customer experience and increase satisfaction.
+Compliance with Regulations: Process management can help organizations comply with regulatory requirements by ensuring that processes are properly documented, controlled, and monitored.
+Disadvantages of Process Management
+Time and Resource Intensive: Implementing and maintaining process management initiatives can be time-consuming and require significant resources.
+Resistance to Change: Some employees may resist changes to established processes, which can slow down or hinder the implementation of process management initiatives.
+Overemphasis on Process: Overemphasis on the process can lead to a lack of focus on customer needs and other important aspects of business operations.
+Risk of Standardization: Standardizing processes too much can limit flexibility and creativity, potentially stifling innovation.
+Difficulty in Measuring Results: Measuring the effectiveness of process management initiatives can be difficult, making it challenging to determine their impact on organizational performance.
+GATE-CS-Questions on Process Management
+Q.1: Which of the following need not necessarily be saved on a context switch between processes? (GATE-CS-2000) 
+(A) General purpose registers 
+
+(B) Translation lookaside buffer 
+
+(C) Program counter 
+
+(D) All of the above 
+
+Answer: (B)
+
+In a process context switch, the state of the first process must be saved somehow, so that when the scheduler gets back to the execution of the first process, it can restore this state and continue. The state of the process includes all the registers that the process may be using, especially the program counter, plus any other operating system-specific data that may be necessary. A translation look-aside buffer (TLB) is a CPU cache that memory management hardware uses to improve virtual address translation speed. A TLB has a fixed number of slots that contain page table entries, which map virtual addresses to physical addresses. On a context switch, some TLB entries can become invalid, since the virtual-to-physical mapping is different. The simplest strategy to deal with this is to completely flush the TLB. 
+
+Q.2: The time taken to switch between user and kernel modes of execution is t1 while the time taken to switch between two processes is t2. Which of the following is TRUE? (GATE-CS-2011) 
+(A) t1 > t2 
+
+(B) t1 = t2 
+
+(C) t1 < t2 
+
+(D) nothing can be said about the relation between t1 and t2. 
+
+Answer: (C)
+
+Process switching involves a mode switch. Context switching can occur only in kernel mode. 
+
+FAQs on Process Management
+Q.1: Why process management is important?
+Answers:
+
+Process management is crucial for organizations as it enables them to identify inefficiencies, eliminate waste, and enhance productivity. By standardizing processes, eliminating bottlenecks, and implementing continuous improvement practices, organizations can achieve better results, meet customer expectations, and gain a competitive advantage.
+
+Q.2: What is the main difference between process manager and memory manager?
+Answer:
+
+Processes in the system are manage by processor manager and also it is responsible for the sharing of the CPU. whereas, memory in the system is managed by memory manager and it is responsible also for allocation and deallocation of memory, virtual memory management, etc.
+
+Q.3: What are process management examples?
+Answer:
+
+Some process management examples are: Eliminate redundant processes, automate workflows and Improve communication between multiple processes with appropriate business tools.
+
+
+Get 90% Course fee refund in just 90 Days! Also get 1:1 Mock Interview, Job assistance and more additional benefits on selected courses. Take up the Three 90 challenge today!
+Unlock the Power of Placement Preparation!
+Feeling lost in OS, DBMS, CN, SQL, and DSA chaos? Our Complete Interview Preparation Course is the ultimate guide to conquer placements. Trusted by over 100,000+ geeks, this course is your roadmap to interview triumph.
+Ready to dive in? Explore our Free Demo Content and join our Complete Interview Preparation course.
+
+
+
+235
+ Suggest improvement
+Previous
+Real Time Operating System (RTOS)
+Next
+Process Table and Process Control Block (PCB)
+Share your thoughts in the comments
+
+Add Your Comment
+Similar Reads
+Difference Between Process, Parent Process, and Child Process
+Operating Systems | Process Management | Question 6
+Operating Systems | Process Management | Question 6
+Operating Systems | Process Management | Question 6
+Multi Threading Models in Process Management
+Process Scheduler : Job and Process Status
+Difference between Process Image and Multi Thread Process image
+Process Table and Process Control Block (PCB)
+Process states and Transitions in a UNIX Process
+Introduction of Process Synchronization
+https://media.geeksforgeeks.org/auth/avatar.png
+GeeksforGeeks

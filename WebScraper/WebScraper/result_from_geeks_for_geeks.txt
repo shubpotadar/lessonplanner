@@ -1,0 +1,3242 @@
+Python Lists
+                                        
+                                                                                    
+                                                Last Updated : 
+                                                09 Apr 2024
+                                            
+                                                                            
+                                                                
+                                 
+                                                                     
+                                            
+                                                Improve
+                                                
+                                                    
+                                                      
+                                                    
+                                                
+
+                                                                                 
+                                    
+                                        
+                                        
+                                        
+                                    
+                                  
+                                 
+                            
+                            
+                            
+                                        
+                                            
+                                             
+                                                
+                                                    
+                                                        
+                                                        Improve
+                                                    
+                                                
+                                                                                         
+                                            
+                                                     
+                                                        Like Article
+                                                    
+                                                    
+                                                        
+                                                        Like
+                                                    
+                                                
+
+                                            
+                                            
+                                                
+                                                    
+                                                        
+                                                        Save
+                                                    
+                                                
+
+                                            
+                                            
+                                                
+                                                    
+                                                        
+                                                        Share
+                                                    
+                                                
+                                            
+                                            
+                                                
+                                                    
+                                                        
+                                                        Report
+                                                    
+                                                
+
+                                            
+                                        
+                                    
+                            
+                                                                Python Lists are just like dynamically sized arrays declared in other languages (vector in C++ and ArrayList in Java). In simple language a Python list is a collection of things enclosed in   and separated by commas. 
+
+The list is a sequence data type which is used to store the collection of data. Tuples and String are other types of sequence data types.
+
+Example of list in Python
+Here we are creating Python List using .
+
+
+Python3
+
+
+
+
+
+
+
+                                    
+
+                                    
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+                                
+
+
+
+
+
+
+
+
+
+
+Var = "Geeks" "for" "Geeks" 
+print(Var)
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+                        
+
+
+
+
+Output:
+"Geeks" "for" "Geeks"
+Lists are the simplest containers that are an integral part of the Python language. Lists need not be homogeneous always which makes it the most powerful tool in Python. A single list may contain DataTypes like Integers Strings as well as Objects. Lists are mutable and hence they can be altered even after their creation.
+
+Creating a List in Python
+Lists in Python can be created by just placing the sequence inside the square brackets. Unlike Sets a list doesn’t need a built-in function for its creation of a list. 
+
+Note: Unlike Sets the list may contain mutable elements.  
+
+Example 1: Creating a list in Python
+
+Python3
+
+
+
+
+
+
+
+                                    
+
+                                    
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+                                
+
+
+
+
+
+
+
+
+
+
+# Python program to demonstrate 
+# Creation of List 
+  
+# Creating a List 
+List =  
+print("Blank List: ") 
+print(List) 
+  
+# Creating a List of numbers 
+List = 10 20 14 
+print("\nList of numbers: ") 
+print(List) 
+  
+# Creating a List of strings and accessing 
+# using index 
+List = "Geeks" "For" "Geeks" 
+print("\nList Items: ") 
+print(List0) 
+print(List2) 
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+                        
+
+
+
+
+Output
+Blank List: 
+
+
+List of numbers: 
+10 20 14
+
+List Items: 
+Geeks
+Geeks
+
+
+Complexities for Creating Lists
+Time Complexity: O(1)
+Space Complexity: O(n)
+Example 2:  Creating a list with multiple distinct or duplicate elements
+A list may contain duplicate values with their distinct positions and hence multiple distinct or duplicate values can be passed as a sequence at the time of list creation.
+
+Python3
+
+
+
+
+
+
+
+                                    
+
+                                    
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+                                
+
+
+
+
+
+
+
+
+
+
+# Creating a List with 
+# the use of Numbers 
+# (Having duplicate values) 
+List = 1 2 4 4 3 3 3 6 5 
+print("\nList with the use of Numbers: ") 
+print(List) 
+  
+# Creating a List with 
+# mixed type of values 
+# (Having numbers and strings) 
+List = 1 2 Geeks 4 For 6 Geeks 
+print("\nList with the use of Mixed Values: ") 
+print(List) 
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+                        
+
+
+
+
+Output
+
+List with the use of Numbers: 
+1 2 4 4 3 3 3 6 5
+
+List with the use of Mixed Values: 
+1 2 Geeks 4 For 6 Geeks
+
+
+Accessing elements from the List
+In order to access the list items refer to the index number. Use the index operator   to access an item in a list. The index must be an integer. Nested lists are accessed using nested indexing. 
+Example 1: Accessing elements from list
+
+Python3
+
+
+
+
+
+
+
+                                    
+
+                                    
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+                                
+
+
+
+
+
+
+
+
+
+
+# Python program to demonstrate 
+# accessing of element from list 
+  
+# Creating a List with 
+# the use of multiple values 
+List = "Geeks" "For" "Geeks" 
+  
+# accessing a element from the 
+# list using index number 
+print("Accessing a element from the list") 
+print(List0) 
+print(List2) 
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+                        
+
+
+
+
+Output
+Accessing a element from the list
+Geeks
+Geeks
+
+
+Example 2: Accessing elements from a multi-dimensional list
+
+Python3
+
+
+
+
+
+
+
+                                    
+
+                                    
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+                                
+
+
+
+
+
+
+
+
+
+
+# Creating a Multi-Dimensional List 
+# (By Nesting a list inside a List) 
+List = Geeks For Geeks 
+  
+# accessing an element from the 
+# Multi-Dimensional List using 
+# index number 
+print("Accessing a element from a Multi-Dimensional list") 
+print(List01) 
+print(List10)
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+                        
+
+
+
+
+Output
+Accessing a element from a Multi-Dimensional list
+For
+Geeks
+
+
+Negative indexing
+In Python negative sequence indexes represent positions from the end of the array. Instead of having to compute the offset as in Listlen(List)-3 it is enough to just write List-3. Negative indexing means beginning from the end -1 refers to the last item -2 refers to the second-last item etc.
+
+Python3
+
+
+
+
+
+
+
+                                    
+
+                                    
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+                                
+
+
+
+
+
+
+
+
+
+
+List = 1 2 Geeks 4 For 6 Geeks 
+  
+# accessing an element using 
+# negative indexing 
+print("Accessing element using negative indexing") 
+  
+# print the last element of list 
+print(List-1) 
+  
+# print the third last element of list 
+print(List-3) 
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+                        
+
+
+
+
+Output
+Accessing element using negative indexing
+Geeks
+For
+
+
+Complexities for Accessing elements in a Lists:
+Time Complexity: O(1)
+Space Complexity: O(1)
+Getting the size of Python list
+Python len() is used to get the length of the list.
+
+Python3
+
+
+
+
+
+
+
+                                    
+
+                                    
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+                                
+
+
+
+
+
+
+
+
+
+
+# Creating a List 
+List1 =  
+print(len(List1)) 
+  
+# Creating a List of numbers 
+List2 = 10 20 14 
+print(len(List2)) 
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+                        
+
+
+
+
+Output
+0
+3
+
+
+Taking Input of a Python List
+We can take the input of a list of elements as string integer float etc. But the default one is a string.
+ 
+Example 1: 
+
+
+Python3
+
+
+
+
+
+
+
+                                    
+
+                                    
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+                                
+
+
+
+
+
+
+
+
+
+
+# Python program to take space 
+# separated input as a string 
+# split and store it to a list 
+# and print the string list 
+  
+# input the list as string 
+string = input("Enter elements (Space-Separated): ") 
+  
+# split the strings and store it to a list 
+lst = string.split()   
+print(The list is: lst)   # printing the list 
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+                        
+
+
+
+
+Output:
+Enter elements: GEEKS FOR GEEKS
+The list is: GEEKS FOR GEEKS
+Example 2:
+
+
+Python
+
+
+
+
+
+
+
+                                    
+
+                                    
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+                                
+
+
+
+
+
+
+
+
+
+
+# input size of the list 
+n = int(input("Enter the size of list : ")) 
+# store integers in a list using map 
+# split and strip functions 
+lst = list(map(int input("Enter the integer\ 
+elements:").strip().split())):n 
+  
+# printing the list 
+print(The list is: lst)    
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+                        
+
+
+
+
+Output:
+Enter the size of list : 4
+Enter the integer elements: 6 3 9 10
+The list is: 6 3 9 10
+To know more see this.
+Adding Elements to a Python List
+Method 1: Using append() method
+Elements can be added to the List by using the built-in append() function. Only one element at a time can be added to the list by using the append() method for the addition of multiple elements with the append() method loops are used. Tuples can also be added to the list with the use of the append method because tuples are immutable. Unlike Sets Lists can also be added to the existing list with the use of the append() method.
+
+Python3
+
+
+
+
+
+
+
+                                    
+
+                                    
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+                                
+
+
+
+
+
+
+
+
+
+
+# Python program to demonstrate 
+# Addition of elements in a List 
+  
+# Creating a List 
+List =  
+print("Initial blank List: ") 
+print(List) 
+  
+# Addition of Elements 
+# in the List 
+List.append(1) 
+List.append(2) 
+List.append(4) 
+print("\nList after Addition of Three elements: ") 
+print(List) 
+  
+# Adding elements to the List 
+# using Iterator 
+for i in range(1 4): 
+    List.append(i) 
+print("\nList after Addition of elements from 1-3: ") 
+print(List) 
+  
+# Adding Tuples to the List 
+List.append((5 6)) 
+print("\nList after Addition of a Tuple: ") 
+print(List) 
+  
+# Addition of List to a List 
+List2 = For Geeks 
+List.append(List2) 
+print("\nList after Addition of a List: ") 
+print(List) 
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+                        
+
+
+
+
+Output
+Initial blank List: 
+
+
+List after Addition of Three elements: 
+1 2 4
+
+List after Addition of elements from 1-3: 
+1 2 4 1 2 3
+
+List after Addition of a Tuple: 
+1 2 4 1 2 3 (5 6)
+
+List after Addition of a List: 
+1 2 4 1 2 3 (5 6) For Geeks
+
+
+Complexities for Adding elements in a Lists(append() method):
+Time Complexity: O(1)
+Space Complexity: O(1)
+Method 2: Using insert() method
+append() method only works for the addition of elements at the end of the List for the addition of elements at the desired position insert() method is used. Unlike append() which takes only one argument the insert() method requires two arguments(position value). 
+
+Python3
+
+
+
+
+
+
+
+                                    
+
+                                    
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+                                
+
+
+
+
+
+
+
+
+
+
+# Python program to demonstrate  
+# Addition of elements in a List 
+   
+# Creating a List 
+List = 1234 
+print("Initial List: ") 
+print(List) 
+  
+# Addition of Element at  
+# specific Position 
+# (using Insert Method) 
+List.insert(3 12) 
+List.insert(0 Geeks) 
+print("\nList after performing Insert Operation: ") 
+print(List) 
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+                        
+
+
+
+
+Output
+Initial List: 
+1 2 3 4
+
+List after performing Insert Operation: 
+Geeks 1 2 3 12 4
+
+
+Complexities for Adding elements in a Lists(insert() method):
+Time Complexity: O(n)
+Space Complexity: O(1)
+Method 3: Using extend() method
+Other than append() and insert() methods there’s one more method for the Addition of elements extend() this method is used to add multiple elements at the same time at the end of the list.
+
+Note: append() and extend() methods can only add elements at the end.
+
+
+Python3
+
+
+
+
+
+
+
+                                    
+
+                                    
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+                                
+
+
+
+
+
+
+
+
+
+
+# Python program to demonstrate 
+# Addition of elements in a List 
+  
+# Creating a List 
+List = 1 2 3 4 
+print("Initial List: ") 
+print(List) 
+  
+# Addition of multiple elements 
+# to the List at the end 
+# (using Extend Method) 
+List.extend(8 Geeks Always) 
+print("\nList after performing Extend Operation: ") 
+print(List) 
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+                        
+
+
+
+
+Output
+Initial List: 
+1 2 3 4
+
+List after performing Extend Operation: 
+1 2 3 4 8 Geeks Always
+
+
+Complexities for Adding elements in a Lists(extend() method):
+Time Complexity: O(n)
+Space Complexity: O(1)
+Reversing a List
+Method 1:  A list can be reversed by using the reverse() method in Python.
+
+Python3
+
+
+
+
+
+
+
+                                    
+
+                                    
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+                                
+
+
+
+
+
+
+
+
+
+
+# Reversing a list 
+mylist = 1 2 3 4 5 Geek Python 
+mylist.reverse() 
+print(mylist)
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+                        
+
+
+
+
+Output
+Python Geek 5 4 3 2 1
+
+
+Method 2: Using the reversed() function:
+The reversed() function returns a reverse iterator which can be converted to a list using the list() function.
+
+Python3
+
+
+
+
+
+
+
+                                    
+
+                                    
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+                                
+
+
+
+
+
+
+
+
+
+
+my_list = 1 2 3 4 5 
+reversed_list = list(reversed(my_list)) 
+print(reversed_list) 
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+                        
+
+
+
+
+Output
+5 4 3 2 1
+
+
+Removing Elements from the List
+Method 1: Using remove() method
+Elements can be removed from the List by using the built-in remove() function but an Error arises if the element doesn’t exist in the list. Remove() method only removes one element at a time to remove a range of elements the iterator is used. The remove() method removes the specified item.
+
+Note: Remove method in List will only remove the first occurrence of the searched element.
+
+Example 1:
+
+Python3
+
+
+
+
+
+
+
+                                    
+
+                                    
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+                                
+
+
+
+
+
+
+
+
+
+
+# Python program to demonstrate 
+# Removal of elements in a List 
+  
+# Creating a List 
+List = 1 2 3 4 5 6 
+        7 8 9 10 11 12 
+print("Initial List: ") 
+print(List) 
+  
+# Removing elements from List 
+# using Remove() method 
+List.remove(5) 
+List.remove(6) 
+print("\nList after Removal of two elements: ") 
+print(List) 
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+                        
+
+
+
+
+Output
+Initial List: 
+1 2 3 4 5 6 7 8 9 10 11 12
+
+List after Removal of two elements: 
+1 2 3 4 7 8 9 10 11 12
+
+
+Example 2:
+
+Python3
+
+
+
+
+
+
+
+                                    
+
+                                    
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+                                
+
+
+
+
+
+
+
+
+
+
+# Creating a List 
+List = 1 2 3 4 5 6 
+        7 8 9 10 11 12 
+# Removing elements from List 
+# using iterator method 
+for i in range(1 5): 
+    List.remove(i) 
+print("\nList after Removing a range of elements: ") 
+print(List)
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+                        
+
+
+
+
+Output
+
+List after Removing a range of elements: 
+5 6 7 8 9 10 11 12
+
+
+Complexities for Deleting elements in a Lists(remove() method):
+Time Complexity: O(n)
+Space Complexity: O(1)
+Method 2: Using pop() method
+pop() function can also be used to remove and return an element from the list but by default it removes only the last element of the list to remove an element from a specific position of the List the index of the element is passed as an argument to the pop() method.
+
+Python3
+
+
+
+
+
+
+
+                                    
+
+                                    
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+                                
+
+
+
+
+
+
+
+
+
+
+List = 1 2 3 4 5 
+  
+# Removing element from the 
+# Set using the pop() method 
+List.pop() 
+print("\nList after popping an element: ") 
+print(List) 
+  
+# Removing element at a 
+# specific location from the 
+# Set using the pop() method 
+List.pop(2) 
+print("\nList after popping a specific element: ") 
+print(List) 
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+                        
+
+
+
+
+Output
+
+List after popping an element: 
+1 2 3 4
+
+List after popping a specific element: 
+1 2 4
+
+
+Complexities for Deleting elements in a Lists(pop() method):
+Time Complexity: O(1)/O(n) (O(1) for removing the last element O(n) for removing the first and middle elements)
+Space Complexity: O(1)
+Slicing of a List
+We can get substrings and sublists using a slice. In Python List there are multiple ways to print the whole list with all the elements but to print a specific range of elements from the list we use the Slice operation. 
+Slice operation is performed on Lists with the use of a colon(:). 
+To print elements from beginning to a range use:
+
+: Index
+
+To print elements from end-use:
+
+:-Index
+
+To print elements from a specific Index till the end use 
+
+Index:
+
+To print the whole list in reverse order use 
+
+::-1
+
+Note – To print elements of List from rear-end use Negative Indexes. 
+ 
+UNDERSTANDING SLICING OF LISTS:
+
+pr0 accesses the first item 2.
+pr-4 accesses the fourth item from the end 5.
+pr2: accesses 5 7 11 13 a list of items from third to last.
+pr:4 accesses 2 3 5 7 a list of items from first to fourth.
+pr2:4 accesses 5 7 a list of items from third to fifth.
+pr1::2 accesses 3 7 13 alternate items starting from the second item.
+
+
+Python3
+
+
+
+
+
+
+
+                                    
+
+                                    
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+                                
+
+
+
+
+
+
+
+
+
+
+# Python program to demonstrate 
+# Removal of elements in a List 
+  
+# Creating a List 
+List = G E E K S F 
+        O R G E E K S 
+print("Initial List: ") 
+print(List) 
+  
+# Print elements of a range 
+# using Slice operation 
+Sliced_List = List3:8 
+print("\nSlicing elements in a range 3-8: ") 
+print(Sliced_List) 
+  
+# Print elements from a 
+# pre-defined point to end 
+Sliced_List = List5: 
+print("\nElements sliced from 5th "
+      "element till the end: ") 
+print(Sliced_List) 
+  
+# Printing elements from 
+# beginning till end 
+Sliced_List = List: 
+print("\nPrinting all elements using slice operation: ") 
+print(Sliced_List) 
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+                        
+
+
+
+
+Output
+Initial List: 
+G E E K S F O R G E E K S
+
+Slicing elements in a range 3-8: 
+K S F O R
+
+Elements sliced from 5th element till the end: 
+F O R G E E K S
+
+Printing all elements using slice operation: 
+G E E K S F O R G E E K S
+
+
+Negative index List slicing
+
+Python3
+
+
+
+
+
+
+
+                                    
+
+                                    
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+                                
+
+
+
+
+
+
+
+
+
+
+# Creating a List 
+List = G E E K S F 
+        O R G E E K S 
+print("Initial List: ") 
+print(List) 
+  
+# Print elements from beginning 
+# to a pre-defined point using Slice 
+Sliced_List = List:-6 
+print("\nElements sliced till 6th element from last: ") 
+print(Sliced_List) 
+  
+# Print elements of a range 
+# using negative index List slicing 
+Sliced_List = List-6:-1 
+print("\nElements sliced from index -6 to -1") 
+print(Sliced_List) 
+  
+# Printing elements in reverse 
+# using Slice operation 
+Sliced_List = List::-1 
+print("\nPrinting List in reverse: ") 
+print(Sliced_List) 
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+                        
+
+
+
+
+Output
+Initial List: 
+G E E K S F O R G E E K S
+
+Elements sliced till 6th element from last: 
+G E E K S F O
+
+Elements sliced from index -6 to -1
+R G E E K
+
+Printing List in reverse: 
+S K E E G R O F S K E E G
+
+
+List Comprehension
+Python List comprehensions are used for creating new lists from other iterables like tuples strings arrays lists etc. A list comprehension consists of brackets containing the expression which is executed for each element along with the for loop to iterate over each element. 
+Syntax:
+
+newList =  expression(element) for element in oldList if condition 
+
+Example: 
+
+Python3
+
+
+
+
+
+
+
+                                    
+
+                                    
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+                                
+
+
+
+
+
+
+
+
+
+
+# Python program to demonstrate list 
+# comprehension in Python 
+  
+# below list contains square of all 
+# odd numbers from range 1 to 10 
+odd_square = x ** 2 for x in range(1 11) if x % 2 == 1 
+print(odd_square) 
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+                        
+
+
+
+
+Output
+1 9 25 49 81
+
+
+For better understanding the above code is similar to as follows: 
+
+Python3
+
+
+
+
+
+
+
+                                    
+
+                                    
+                                    
+
+                                    
+
+                                    
+                                    
+                                    
+                                
+
+
+
+
+
+
+
+
+
+
+# for understanding above generation is same as 
+odd_square =  
+  
+for x in range(1 11): 
+    if x % 2 == 1: 
+        odd_square.append(x**2) 
+  
+print(odd_square) 
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+
+                        
+
+
+
+
+Output
+1 9 25 49 81
+
+
+Refer to the below articles to get detailed information about List Comprehension.
+
+Python List Comprehension and Slicing
+Nested List Comprehensions in Python
+List comprehension and ord() in Python
+
+Basic Example on Python List
+
+Python program to interchange first and last elements in a list
+Python program to swap two elements in a list
+Python – Swap elements in String list
+Python | Ways to find length of list
+Maximum of two numbers in Python
+Minimum of two numbers in Python
+
+To Practice the basic list operation please read this article – Python List of program
+List Methods
+
+
+
+
+Function
+Description
+
+
+
+
+Append()
+Add an element to the end of the list
+
+
+Extend()
+Add all elements of a list to another list
+
+
+Insert()
+Insert an item at the defined index
+
+
+Remove()
+Removes an item from the list
+
+
+Clear()
+Removes all items from the list
+
+
+Index()
+Returns the index of the first matched item
+
+
+Count()
+Returns the count of the number of items passed as an argument
+
+
+Sort()
+Sort items in a list in ascending order
+
+
+Reverse()
+Reverse the order of items in the list
+
+
+copy()
+Returns a copy of the list
+
+
+pop()
+Removes and returns the item at the specified index. If no index is provided it removes and returns the last item.
+
+
+
+
+To know more refer to this article – Python List methods
+The operations mentioned above modify the list Itself.
+Built-in functions with List
+
+
+
+
+Function
+Description
+
+
+
+
+reduce()
+apply a particular function passed in its argument to all of the list elements stores the intermediate result and only returns the final summation value
+
+
+sum()
+Sums up the numbers in the list
+
+
+ord()
+Returns an integer representing the Unicode code point of the given Unicode character
+
+
+cmp()
+This function returns 1 if the first list is “greater” than the second list
+
+
+max()
+return maximum element of a given list
+
+
+min()
+return minimum element of a given list
+
+
+all()
+Returns true if all element is true or if the list is empty
+
+
+any()
+return true if any element of the list is true. if the list is empty return false
+
+
+len()
+Returns length of the list or size of the list
+
+
+enumerate()
+Returns enumerate object of the list
+
+
+accumulate()
+apply a particular function passed in its argument to all of the list elements returns a list containing the intermediate results
+
+
+filter()
+tests if each element of a list is true or not
+
+
+map()
+returns a list of the results after applying the given function to each item of a given iterable
+
+
+lambda()
+This function can have any number of arguments but only one expression which is evaluated and returned.
+
+
+
+
+Do go through recent articles on Lists
+Useful Links: 
+
+Recent Articles on Python List
+Python Tutorials
+Multiple Choice Questions
+All articles in Python Category
+
+                                 
+                                                                 
+                                
+
+  let API_SCRIPT_URL = "https://apiscript.geeksforgeeks.org/"
+  let GFG_SITE_URL = "https://www.geeksforgeeks.org/"
+  const updateUserViewurl = `${API_SCRIPT_URL}update-user-views/`;
+  const getCsrfTokenUrl = `${API_SCRIPT_URL}get-csrf-token/`;
+  var main_video_description_details = "";
+  //html to text
+  function htmlToText(html) {
+    var temp = document.createElement(div);
+    temp.innerHTML = html;
+    return temp.textContent;
+  }
+
+  //add utm param into the url
+
+  function addVideoTabParam(url){
+      var url = new URL(url);
+
+      url.searchParams.append(utm_source geeksforgeeks);
+      url.searchParams.append(utm_medium article_video_tab);
+      url.searchParams.append(utm_campaign article_video_tab);
+
+      return url.href;
+  }
+
+  //function to get term name
+  function getTermType(type){
+      if(type === 1) return "category";
+      return "tag";
+  }
+
+  //function fit related videos description into at most two line if description if large
+  function fitRelatedVideosDescription(){
+    var elements = document.getElementById("related-videos-content").querySelectorAll(".flex-grid-row .description-main .video-description");
+    elements.forEach((element)=>{
+      // console.log(element.offsetHeight element.innerHTML);
+      element.classList.remove("display2lines");
+      element.querySelector(.read-more-btn).style.display = none;
+      if(element.offsetHeight > 50){
+        element.classList.add("display2lines");
+        element.querySelector(.read-more-btn).style.display = block;
+      }
+    });
+  }
+
+  //formating the date into DD m YYYY format
+  function formatDate(year month day){
+    month-=1;
+    let d = new Date(year month day);
+    d = d.toString();
+    let date_sep = d.split(" ");
+    return date_sep2 + " " + date_sep1 + " " + date_sep3;
+  }
+
+  //To get cookie value saved into the browser cookie
+  function getCookie(name) {
+      let cookieValue = null;
+      let cooks = document.cookie.split(";");
+
+      for (var i = 0; i < cooks.length; i++) {
+          var icook = cooksi.split("=");
+          if (icook0.trim() === name) {
+              cookieValue = icook1.trim();
+          }
+      }
+
+      return cookieValue;
+  }
+
+  function onWidthChangeEventsListener(){
+    fitRelatedVideosDescription();
+  }
+
+
+/* Article page videos tab css start */
+.like-icon-span {
+  cursor: pointer;
+}
+.save-icon-span {
+  cursor: pointer;
+}
+
+.display2lines {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.flex-grid-row {
+  display: flex;
+}
+
+.flex-grid-row .md-col-8-sm-col-6 {
+  width: 66.66%;
+}
+
+.flex-grid-row .md-col-4-sm-col-6 {
+  width: 33.33%;
+}
+
+.videos-content{
+  margin-top: 0px;
+  line-height: 1.5;
+}
+
+.videos-content .video-poster{
+  width: 100%;
+  height: 170px !important;
+  border-radius: 6px;
+  cursor: pointer !important;
+}
+.videos-content .video-content{
+  margin: 0 0 0 25px;
+}
+
+.videos-content .title {
+  margin-top: 0px;
+  color: var(--color-black);
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  font: var(--font-primary);
+  line-height: 1.5 !important;
+
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+}
+.videos-content  .description-main{
+  margin: 1rem 0;
+}
+.videos-content  .video-description{
+  font: var(--font-primary);
+  font-size: 16px !important;
+  width: auto;
+  color: var(--gfg-text-color);
+  position: relative;
+  line-height: 1.5;
+}
+
+.videos-content  .video-description p{
+  font: var(--font-primary) !important;
+  color: var(--gfg-text-color) !important;
+}
+
+.videos-content  .video-description p strong{
+  color: var(--gfg-text-color) !important;
+}
+
+.video-content .video-description p{
+  text-align: left !important;
+}
+.read-more-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: var(--gfg-body-color);
+    color: var(--color-gfg);
+    display: none;
+}
+
+.videos-content  .read-more-span{
+  color: var(--color-gfg);
+  cursor: pointer;
+}
+
+.videos-content  .read-less-span{
+  color: var(--color-gfg);
+  cursor: pointer;
+}
+
+.videos-content  .explore-video-btn {
+  background-color: var(--color-gfg);
+  padding: 5px 16px;
+  border-radius: 6px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 15px
+}
+
+.videos-content  .explore-video-btn:hover{
+  transition: 0.4s;
+  -webkit-box-shadow: 2px 0px 4px 0px rgba(0000.75);
+  -moz-box-shadow: 2px 0px 4px 0px rgba(0000.75);
+  box-shadow: 2px 0px 4px 0px rgba(0000.75);
+}
+
+.videos-content  .video-content{
+  height: 100%;
+  /* display: flex;
+  align-items: center; */
+}
+.videos-content  .videos-horizontal-line{
+  border: 0;
+  height: 1px;
+  background: var(--gfg-darkgrey);
+  margin: 30px 0px !important;
+}
+.videos-content  .videos-view-all-btn {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  /* text-decoration-line: underline; */
+  color: var(--gfg-color-lg);
+  cursor: pointer;
+}
+.videos-content  .videos-view-all-btn:hover{
+  color: var(--color-gfg);
+}
+.btn-main{
+  margin-top: 15px;
+}
+
+
+/* Article page videos tab css end */
+
+
+/* Article page video-tab css start*/
+#article-video {
+  height:360px;
+  width: 640px;
+}
+.related-videos-main{
+  position: relative;
+  margin: -6px 0 16px 0;
+}
+.related-videos-main .heading {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--color-black);
+}
+.video-view-all-main{
+    /* position: absolute; */
+    float: right;
+    right: 5px;
+    bottom: 0px;
+}
+.article-video-tab-content {
+  margin: 27px 0 0 0;
+  font-family: var(--font-primary);
+}
+.video-share-section{
+  display: flex;
+  margin: 16px 0 0 0;
+}
+
+.video-share-section .date-main{
+  width: 50%;
+}
+
+.share-icons-main{
+  width: 50%;
+  display: flex; 
+  flex-direction: row-reverse;
+}
+.share-icons-main .icon-div {
+  position: relative;
+}
+
+.share-icons-main span{
+  font-size: 16px;
+}
+
+.share-icons-main i{
+  cursor: pointer;
+}
+
+.date-main span{
+  font-size: 16px;
+  color: var(--color-black);
+}
+.article-video-tab-content  .videos-horizontal-line{
+  border: 0;
+  height: 1px;
+  background: var(--gfg-darkgrey);
+  margin: 15px 0px;
+}
+
+/* .article-video-tab-content .videos-horizontal-line{
+  border: 1px solid #D6D5D5;
+  margin: 14px 0px;
+} */
+
+.video-content-section .video-title{
+  margin: 20px 0 10px 0;
+  color: var(--color-black);
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  font: var(--font-primary);
+  line-height: 1.5 !important;
+
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.article-video-tab-content  .read-more-span{
+  color: var(--color-gfg) !important;
+  cursor: pointer;
+}
+
+.article-video-tab-content  .read-less-span{
+  color: var(--color-gfg) !important;
+  cursor: pointer;
+}
+
+.video-content-section .video-description {
+  font-size: 16px;
+  color: var(--gfg-text-color);
+}
+
+.article-video-tab-content .video-tags-list {
+  margin: 15px 0 0 0;
+}
+
+.article-video-tab-content .video-tags-list .item{
+  color: var(--color-gfg);
+  font-size: 14px !important;
+  padding: 0 13px 0 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.explore-all-btn-main{
+    margin: 5px 0 80px 0;
+}
+
+.explore-all-btn {
+  float:right;
+  font-size: 16px;
+  color: var(--navy-blue-to-grey);
+  cursor: pointer;
+
+  display: flex;
+  position: relative;
+  width: 115px;
+
+}
+
+.share-icons-main .like-icon{
+  width:70px;
+}
+/* .share-icons-main .like-icon i{
+  position: absolute;
+  left: 32px;
+} */
+/* Article page video-tab css end*/
+
+
+@media (max-width: 1440px) {
+  .flex-grid-row .md-col-8-sm-col-6{
+      width: 60%;
+  }
+  
+  .flex-grid-row .md-col-4-sm-col-6{
+      width: 40%;
+  }
+}
+
+@media (max-width: 1300px) {
+
+  .videos-content .video-poster{
+    height: 155px !important;
+  }
+
+  .flex-grid-row .md-col-8-sm-col-6{
+      width: 55%;
+  }
+  
+  .flex-grid-row .md-col-4-sm-col-6{
+      width: 45%;
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .flex-grid-row .md-col-8-sm-col-6{
+      width: 50%;
+  }
+  
+  .flex-grid-row .md-col-4-sm-col-6{
+      width: 50%;
+  }
+
+  .btn-main{
+    margin-top: 10px;
+  }
+  .videos-content .explore-video-btn{
+    padding: 3px 10px;
+  }
+}
+
+@media (max-width: 992.5px) {
+  .flex-grid-row .md-col-8-sm-col-6{
+      width: 66%;
+  }
+  
+  .flex-grid-row .md-col-4-sm-col-6{
+      width: 34%;
+  }
+
+  .videos-content .video-poster{
+    height: 145px !important;
+  }
+
+  .videos-content .title {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    font: var(--font-primary);
+  }
+  .videos-content .description-main {
+      margin: 10px 0;
+  }
+  .videos-content .description-main p{
+    line-height: 1.3 !important;
+  }
+  .read-more-btn{
+    line-height: 1.2 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex-grid-row .md-col-8-sm-col-6{
+      width: 50%;
+  }
+
+  .flex-grid-row .md-col-4-sm-col-6{
+      width: 50%;
+  }
+
+  #article-video {
+    max-height:300px;
+    min-height: 300px;
+    width: 100%;
+  }
+
+}
+
+@media(max-width:500px) {
+
+  .videos-content .video-poster{
+    height: 115px !important;
+  }
+
+  .videos-content  .description-main{
+      margin: 5px 0;
+      line-height: 1.2 !important;
+  }
+  .videos-content  .video-description {
+      font-size: 13px !important;
+  }
+
+  .videos-content .video-content {
+    margin: 0 0 0 7px;
+  }
+
+  .videos-content  .videos-horizontal-line{
+      margin: 20px 0px;
+  }
+
+  #article-video {
+    max-height:200px;
+    min-height: 200px;
+    width: 100%;
+  }
+
+  .article-video-tab-content .video-tags-list .item{
+    font-size: 12px !important;
+    padding: 0 7px 0 0;
+  }
+
+  .article-video-tab-content .video-tags-list {
+    margin: 0px 0 0 0;
+  }
+  .video-content-section .video-title {
+    margin: 0px 0 0px 0;
+    font-size: 18px !important;
+  }
+  .explore-all-btn {
+    font-size: 14px;
+    width: 105px;
+  }
+
+
+  .videos-content .videos-view-all-btn {
+    font-size: 14px;
+  }
+  .explore-all-btn-main {
+    margin: 5px 0 55px 0;
+  }
+
+  .related-videos-main .heading {
+    font-size: 22px;
+  }
+
+  .videos-content .video-description {
+    display: none;
+  }
+  .flex-grid-row {
+    border-radius: 6px;
+    padding: 0 0 13px 0;
+    margin-bottom: 15px;
+    display: block;
+    border: 1px solid rgba(190 186 186 0.08);
+    box-shadow: 0px 1px 2px rgba(0 0 0 0.25);
+    background: var(--white-to-lightblack2);
+  }
+  .flex-grid-row .md-col-4-sm-col-6 {
+    width: 100%;
+  }
+  .flex-grid-row .md-col-8-sm-col-6 {
+    width: 100%;
+  }
+  .videos-content .video-poster {
+    height: 180px !important;
+  }
+  .videos-content  .title{
+    font-size: 16px !important;
+    margin: 5px 0px 15px 0px;
+    line-height: 1.5 !important;
+  }
+  .videos-content .explore-video-btn {
+    padding: 6px 9px;
+    font-size: 11px;
+  }
+  .videos-content .videos-horizontal-line {
+    display: none;
+  }
+  .btn-main {
+    margin: 10px 0 0 0px;
+  }
+  .related-videos-main {
+    margin: 10px 0 15px 0;
+  }
+  .video-share-section {
+    margin: 8px 0 0 0;
+  }
+  .article-video-tab-content .videos-horizontal-line {
+    margin: 5px 0px;
+  }
+  .share-icons-main span {
+    font-size: 13px;
+  }
+  .date-main span {
+    font-size: 14px;
+  }
+  .share-icons-main .icon-div {
+    position: relative;
+  }
+  /* .share-icons-main .like-icon i {
+    top: -4px;
+    left: 26px;
+  } */
+  .share-icons-main .like-icon {
+    width: 60px;
+  }
+
+  .video-content-section .video-description {
+    font-size: 14px;
+  }
+  .article-video-tab-content {
+    margin: 16px 0 0 0;
+  }
+}
+
+@media(max-width:400px) {
+  .videos-content  .title{
+      font-size: 13px !important;
+      margin-bottom: 0px;
+  }
+
+  .videos-content  .video-description {
+      font-size: 12px !important;
+  }
+
+  .videos-content  .videos-horizontal-line{
+      margin: 15px 0px;
+  }
+  .videos-content .title {
+    line-height: 1.4 !important;
+  }
+}
+
+@media(max-width:325px) {
+  .videos-content  .description-main{
+      margin: 1px 0;
+  }
+  .videos-content  .videos-horizontal-line{
+      margin: 10px 0px;
+  }
+}
+
+.video-content-section table tbody tr td {
+  padding: 0px !important;
+  border: none !important;
+}
+
+.videos-content table tbody tr td {
+  padding: 0px !important;
+  border: none !important;
+}
+
+.videos-content table tbody tr {
+  background-color: inherit !important;
+}
+
+.video-content-section table {
+  margin: 0px !important;
+  border: none !important;
+  width: unset !important;
+  line-height: 1.2 !important;
+  border-collapse: inherit !important;
+  border-spacing: 2px !important;
+}
+
+.videos-content table {
+  margin: 0px !important;
+  border: none !important;
+  width: unset !important;
+  line-height: 1.2 !important;
+  border-collapse: inherit !important;
+  border-spacing: 2px !important;
+}
+
+.video-tab-content .gfg-icon_thumbs::after {
+      background-position: -40px -1644px;
+}
+
+.gfg-icon_thumb_filled::after {
+  background-position: -40px -1604px;
+}
+
+.gfg-icon_bookmark_filled::after {
+    background-position: -40px -962px;
+}
+
+.gfg-icon_tag-secondary::after{
+  background-position: -125px -400px;
+}
+
+.video-tab-content .gfg-icon_tag-primary:after{
+  background-position: -6px -400px !important;
+}
+
+.poster-div{
+  position: relative;
+}
+
+.poster-div .video-time{
+  position: absolute;
+  bottom: 10px;
+  right: 7px;
+  border-radius: 11px;
+  background: rgba(000.65);
+  padding: 0 12px 2px 12px;
+  color: white;
+  font-size: 13px;
+}
+.poster-div img{
+  margin:unset !important;
+}
+.video-content .read-more-btn span {
+    color: var(--gfg-text-color);
+}
+
+.article-video-tab-content .video-description :is(h1 h2 h3 h4 h5 h6){
+  color: var(--color-black) !important;
+}
+
+.article-video-tab-content .video-description :is(h1 h2 h3 h4 h5 h6) span{
+  color: var(--color-black) !important;
+}
+
+.article-video-tab-content .video-description :is(h1 h2 h3 h4 h5 h6) p{
+  color: var(--color-black) !important;
+}
+
+.article-video-tab-content .video-description span{
+  color: var(--gfg-text-color) !important;
+}
+
+.article-video-tab-content .video-description p{
+  color: var(--gfg-text-color) !important;
+}
+
+.article-video-tab-content .video-description a{
+  color: var(--color-gfg) !important;
+}
+.article-video-tab-content .video-description a span{
+  color: var(--color-gfg) !important;
+}
+
+.disable_btn_click{
+  pointer-events:none;
+  opacity: 0.5;
+}
+
+.video-main{
+  display:flex;
+  justify-content:center;
+}
+
+.vjs-menu-content li{
+  margin:0px !important;
+  text-align:center !important;
+  color:white !important;
+}
+.vjs-menu li.vjs-selected{
+  color:black !important;
+}
+
+
+
+  //adding video min css file into head
+  var video_js_css = document. createElement("link");
+  video_js_css. rel = "stylesheet";
+  video_js_css. href = `${GFG_SITE_URL}videojs/videoapp.min.css`;
+  $("head"). append(video_js_css);
+
+  //creating config object for requiring videojs related files
+  require.config({
+      paths: {
+          "videojs":`${GFG_SITE_URL}videojs/video.min`
+          ima: `${GFG_SITE_URL}videojs/video.ima.min`
+          quality_levels : `${GFG_SITE_URL}videojs/videojs_contrib_quality_levels.min`
+          quality_selector: `${GFG_SITE_URL}videojs/videojs_hls_quality_selector.min`
+      }
+      shim:{
+          ima: {
+              deps: videojs quality_levels quality_selector
+          }
+          quality_levels: {
+              deps: videojs-in-global
+          }
+      }
+  });
+
+  
+  define(global/window  () => {
+      return window;
+  });
+  
+  define(global/document global/window (window) => {
+      return window.document;
+  });
+  
+  define("video.js""videojs" function(videojs) {
+      return window.videojs;
+  });
+  
+  define("videojs-in-global""videojs" function(videojs) {
+      window.videojs = videojs;
+  });
+
+
+
+
+
+ 
+  
+    
+    
+    
+    
+    
+    
+  
+
+  
+  
+  
+
+
+
+  //this variable is to check video is played first time or not
+  let firstTimePlay=false;
+  //functio to 2 digits number string
+  function to2Digits(n){
+    n = n.toString();
+    if(n.length == 0) return "00";
+    if(n.length == 1) return "0"+n;
+    return n;
+  }
+
+  //function to convert sencons to H:M:S string
+  function secondsToHms(time) {
+    time = Number(time);
+    let h = Math.floor(time / 3600);
+    let m = Math.floor(time % 3600 / 60);
+    let s = Math.floor(time % 3600 % 60);
+
+    if(h){
+      h = to2Digits(h);
+    }
+    
+    m = to2Digits(m);
+    s = to2Digits(s);
+
+    return h ? (h +":"+ m +":"+ s) :  (m +":"+ s); 
+  }
+
+  //On play video this will get called
+  function videoPlayCallback(slug){
+    if(!firstTimePlay){
+
+        //retrieving csrftoken from cookie
+        var csrf = getCookie("csrftoken");
+        //Creating request params
+        let data = {
+            method:POST
+            credentials: "include"
+            headers: {
+                Accept: application/json
+                Content-Type: application/json
+                x-csrftoken: csrf
+            }
+            body:JSON.stringify({
+                "slug":slug
+            })
+        };
+
+        if(!!!csrf) //if csrf token is not present then first we will set csrf token then triggering api
+        {
+            fetch(getCsrfTokenUrl {
+                credentials: "include"
+            }).then(res=>{
+                csrf = getCookie("csrftoken");
+                data.headersx-csrftoken = csrf;
+                fetch(updateUserViewurldata).then(res=>res.json()).then(res=>{
+                    console.log(res)
+                    firstTimePlay=true;
+                }).catch((err)=>{
+                    console.log("error: " err);
+                });
+            }).catch((err)=>{
+              console.log(err);
+            });;
+        }
+        else { //csrf token is already present into cookie so call api directly
+            fetch(updateUserViewurldata).then(res=>res.json()).then(res=>{
+                console.log(res)
+                firstTimePlay=true;
+            }).catch((err)=>{
+                console.log("error: " err);
+            });
+        }
+
+    }
+  }
+
+
+  //function to return shorted text
+  function ellipsisText(text length){
+
+    text = htmlToText(text);
+
+    if(text.length<=length){
+        return false;
+    };
+    return text.substring(0 length);
+  }
+
+  //function to hide extre text of the description if it is large
+  function hideMainVideoDescription(video_description video_id) {
+      let width = $( window ).width();
+
+      let text_length =  Math.floor(120*width/1440);
+      let text = ellipsisText(video_description text_length);
+      if(text){
+          text += `... <span class=read-more-span onClick=readMore(${video_id}) style="color: var(--color-gfg) !important;">Read More</span>`;
+      } else {
+          text = video_description;
+      }
+      return text;
+  }
+
+
+  //function to hide the related videos description
+  function showLessRelatedVideoDes(description){
+    return description;
+    let width = $( window ).width();
+    let denominator = 1600;
+    if(width>992 && width<=1300) {
+        denominator = 2100;
+    }
+    let text_length =  Math.floor(90*width/denominator);
+
+    let text = ellipsisText(description text_length);
+    if(text){
+        text += `... <span class=read-more-span>Read More</span>`;
+    } else {
+        text = description;
+    }
+
+    return text;
+  }
+
+  //function to set like icons text and color
+  function setLiked(val) {
+    $(document).ready(function(){
+      if(val == true){
+        $(#video-like-btn).removeClass("gfg-icon_thumbs");
+        $(#video-like-btn).addClass("gfg-icon_thumb_filled");
+        $(#like-icon-span).html("Liked");
+
+      } else {
+        $(#video-like-btn).removeClass("gfg-icon_thumb_filled");
+        $(#video-like-btn).addClass("gfg-icon_thumbs");
+        $(#like-icon-span).html("Like");
+      }
+    });
+    document.getElementById(video-like-btn).setAttribute(data-like-status val);
+  }
+
+  //function to set save icons text and color
+  function setSaved(val) {
+    $(document).ready(function(){
+      if(val == true){
+        $(#video-save-btn).addClass("gfg-icon_bookmark_filled");
+        $(#save-icon-span).html("Saved");
+      } else {
+        $(#video-save-btn).removeClass("gfg-icon_bookmark_filled");
+        $(#save-icon-span).html("Save");
+      }
+    });
+    document.getElementById(video-save-btn).setAttribute(data-save-status val);
+  }
+
+  //function to call like api to upadte like status
+  async function likeVideo(videoId slug){
+    if(!loginData || !loginData.isLoggedIn){
+      document.getElementsByClassName("login-modal-btn")0.click();
+      return;
+    }
+    document.getElementById(`video-like-btn`).classList.add("disable_btn_click");
+    document.getElementById(`like-icon-span`).classList.add("disable_btn_click");
+
+    let liked = (document.getElementById(`video-like-btn`).getAttribute(data-like-status)===true);
+    let watchlist = (document.getElementById(`video-save-btn`).getAttribute(data-save-status)===true);
+
+    var csrf = getCookie("csrftoken");
+
+    if(!!!csrf) //if csrf token is present then set csrf token first then call save api
+    {
+      await fetch(getCsrfTokenUrl {
+          credentials: "include"
+      });
+    }
+
+    let payload = {
+      id: videoId
+      liked
+      viewed: true
+      watchlist
+      slug
+    };
+
+    try {
+        let resp = await fetch(`${API_SCRIPT_URL}update-user-likes/` {
+          method: POST
+          credentials: include
+          headers: {
+              Accept: application/json
+              Content-Type: application/json
+              "X-CSRFToken": getCookie("csrftoken")
+          }
+          body: JSON.stringify(payload)
+        });
+        if(resp.status >= 400)   return;
+        setLiked(!liked);
+        document.getElementById(`video-like-btn`).classList.remove("disable_btn_click");
+        document.getElementById(`like-icon-span`).classList.remove("disable_btn_click");
+    } catch(err) {
+        document.getElementById(`video-like-btn`).classList.remove("disable_btn_click");
+        document.getElementById(`like-icon-span`).classList.remove("disable_btn_click");
+
+        console.log(error in getting stats of video for user err);
+    }
+  }
+
+  //function to call save api to upadte save status
+  async function saveVideo(videoId slug){
+    if(!loginData || !loginData.isLoggedIn){
+      document.getElementsByClassName("login-modal-btn")0.click();
+      return;
+    }
+
+    document.getElementById(`video-save-btn`).classList.add("disable_btn_click");
+    document.getElementById(`save-icon-span`).classList.add("disable_btn_click");
+
+    let liked = (document.getElementById(`video-like-btn`).getAttribute(data-like-status)===true);
+    let watchlist = (document.getElementById(`video-save-btn`).getAttribute(data-save-status)===true);
+    let payload = {
+      id: videoId
+      liked
+      viewed: true
+      watchlist
+      slug
+    };
+
+    var csrf = getCookie("csrftoken");
+
+    if(!!!csrf) //if csrf token is present then set csrf token first then call save api
+    {
+      await fetch(getCsrfTokenUrl {
+          credentials: "include"
+      });
+    }
+
+    try {
+        let resp =  await fetch(`${API_SCRIPT_URL}add-to-watchlist/` {
+          method: POST
+          credentials: include
+          headers: {
+              Accept: application/json
+              Content-Type: application/json
+              "X-CSRFToken": getCookie("csrftoken")
+          }
+          body: JSON.stringify(payload)
+        });
+        if(resp.status >= 400)   return;
+        setSaved(!watchlist);
+        document.getElementById(`video-save-btn`).classList.remove("disable_btn_click");
+        document.getElementById(`save-icon-span`).classList.remove("disable_btn_click");
+    } catch(err) {
+        document.getElementById(`video-save-btn`).classList.remove("disable_btn_click");
+        document.getElementById(`save-icon-span`).classList.remove("disable_btn_click");
+        console.log(error in getting stats of video for user err);
+    }
+  }
+
+  //when anybody click on readless btn this function will get called and will hide the extra text
+  function readLess(id){
+    let width = $( window ).width();
+    let text_length =  Math.floor(120*width/1440);
+    let text = ellipsisText(main_video_description_details text_length);
+    if(text){
+        text += `... <span class=read-more-span onClick=readMore(${id}) style="color: var(--color-gfg) !important;">Read More</span>`;
+    } else {
+        text = video_description;
+    }
+    document.getElementById(`video_id-${id}`).innerHTML = text;
+  }
+
+  //when anybody click on readMore btn this function will get called and will show the full description
+  function readMore(id){
+    document.getElementById(`video_id-${id}`).innerHTML = main_video_description_details + ` <span class=read-less-span onClick=readLess(${id}) style="color: var(--color-gfg) !important;">Read Less</span>`;
+  }
+
+
+
+
+
+    $(document).ready(function(){
+      var curr_post_id = post_id;
+      // curr_post_id = 3622;
+      $(document).on(click .dark-editor-button function () {
+        $(.article-video-tab-content  .videos-horizontal-line:first).css("opacity" "0.2");
+      });
+
+      $(document).on(click .light-editor-button function () {
+        $(.article-video-tab-content  .videos-horizontal-line:first).css("opacity" "0.5");
+      });
+
+      if(window.localStorage.getItem(codeEditorTheme)=="monokai"){
+        $(.article-video-tab-content  .videos-horizontal-line:first).css("opacity" "0.2");
+      } else {
+        $(.article-video-tab-content  .videos-horizontal-line:first).css("opacity" "0.5");
+      }
+      
+
+      // this fucntion will fit whole html of the videos content
+      async function getVideoData(){
+        try {
+          var post_data = "";
+          var video_data ;
+          var course_link = "";
+          var videos = ;
+          var video_description = "";
+          var video_id = null;
+          // if(!!post_data && post_data.length>0){
+            if(true){
+            /*var course_link = "";
+            post_data0course_link?post_data0course_link:"";*/
+            video_data = video_api_response;
+            video_description = video_datadescription;
+            main_video_description_details = video_datadescription;
+            video_id = video_dataid;
+            // videos = video_datarecommendations;
+          } else{
+            $(#main-video-container).remove();
+            let videoPageVideos = await((await fetch(`${API_SCRIPT_URL}gfg-video-list/`)).json());
+            if(videoPageVideos?.results){
+              videos = videoPageVideos.results
+            }
+            if(!!videos && videos.length>0){
+                //Load related videos
+                vidoes = videos.map((video)=>{
+                  video.thumbnail = video?.meta?.thumbnail;
+                  video.largeThumbnail = video?.meta?.largeThumbnail;
+                  return video;
+                })
+                $(".related-videos-content").html(getvideosContent(10));
+            }
+            element = document.getElementById(article-video-tab-content);
+            element.style.display = block;
+            $(.spinner-loading-overlay:eq(0)).remove();
+            $(.spinner-loading-overlay:eq(0)).remove();
+
+            //this function will set related videos description
+            fitRelatedVideosDescription();
+
+            $(window).resize(function(){
+              onWidthChangeEventsListener();
+            });
+
+            $(#video_nav_tab).click(on function(){
+              fitRelatedVideosDescription();
+            });
+            return;
+          }
+          
+          /*if(!videos || videos.length==0){
+            $(.videos-content).hide();
+            // return;
+          }*/
+
+          //fucntion to get tags div content
+          function getTagsString(tags){
+            if(tags.length<=0){
+              return "";
+            }
+
+            //here creatng the tags content div
+            let tagContent = `
+            <div class="video-tags-list">
+                <table>
+                  <tr>
+                    <td>
+                        <div >
+                          <i class="gfg-icon gfg-icon_tag-primary"></i>
+                        </div>
+                    </td>
+                    <td>
+                    `;
+            tags.map((tag)=>{
+              let tag_url = `videos/${getTermType(tagterm_id__term_type)}/${tagterm_id__slug}/`;
+              tagContent+=`<a href="${tag_url}"><div class=item>`+ tagterm_id__term_name +`</div></a>`;
+            });
+            tagContent+=`</td>
+                  </tr>
+                </table>
+              </div>`;
+            return tagContent;
+          }
+
+          //function to create related videos cards
+          function articlePagevideoCard(poster_src="" title="" description="" video_link index tags= duration=0){
+
+            let card =  `<div class=flex-grid-row>
+                <div class=md-col-4-sm-col-6>
+                    <div class=poster-div>
+                      <div class="video-time">
+                        ${secondsToHms(duration)}
+                      </div>
+                    <a href=${video_link} style=text-decoration: none;><img class=video-poster src=${poster_src} style=cursor:pointer !important;>
+                    </a>
+                    </div>
+                </div>
+                <div class=md-col-8-sm-col-6 class=video-left-bar>
+                    <div class=video-content>
+                        <div>
+                            <div class=title-main>
+                              <a href=${video_link} style=text-decoration: none;>  
+                                <div class=title>
+                                  ${title}
+                                </div> 
+                              </a>
+                            </div>
+                            <a href=${video_link} style=text-decoration: none;>  
+                            <div class=description-main>
+                                <div class=video-description display2lines id=video_id-${index}>
+                                  ${showLessRelatedVideoDes(htmlToText(description))}
+                                  <div class="read-more-btn"><span>... </span>Read More</div>
+                                </div>
+                            </div>
+                            </a>
+                          <div>
+                            ${getTagsString(tags)}
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+            return card;
+          }
+
+          //function to set related videos content
+          function getvideosContent(limit=3){
+            videos_content = "";
+            var total_videos = Math.min(videos.length limit);
+            for(let i=0;i<total_videos;i++){
+                if(i < total_videos)
+                {
+                    videos_content+= articlePagevideoCard(videosilargeThumbnailvideosititlevideosidescription`${GFG_SITE_URL}`+videos/+videosislug+/ i videosicategory videosiduration);
+                    if(i != total_videos-1){
+                      videos_content+= <div class="videos-horizontal-line"></div>;
+                    } else{
+                      let view_all_url = `${GFG_SITE_URL}videos/`;
+                      
+                      videos_content+=`
+                      <div class="video-view-all-main">
+                          <a style="text-decoration:none;" href="${view_all_url}">
+                              <span class="videos-view-all-btn">View All</span>
+                          </a>
+                      </div>
+                      `;
+                    }
+                    // videos_content+= <hr/>;
+                }
+            }
+            return videos_content;
+          }
+
+          //function to show main video content with related videos content
+          async function showMainVideoContent(main_video course_link){
+           
+            //Load main video
+            $(".video-main").html(`
+              <video id="article-video" class="video-js vjs-default-skin vjs-big-play-centered"></video>
+            `);
+
+            require("ima" function() {
+            var player = videojs(article-video {
+                  controls: true
+                  // autoplay: true
+                  // muted: true
+                  controlBar: {
+                    pictureInPictureToggle: false
+                  }
+                  playbackRates: 0.5 0.75 1 1.25 1.5 2
+                  poster: main_videometalargeThumbnail
+                  sources: {src: main_videosource type: application/x-mpegURL}
+                  tracks: {src: main_videosubtitle kind:captions srclang: en label: English default: true}
+                }function() {
+                  player.qualityLevels();
+                  try {
+                    player.hlsQualitySelector();  
+                  } catch (error) {
+                    console.log("HLS not working - ")
+                  }  
+                }
+              );
+
+              const video = document.querySelector("video");
+              const events =
+                  {
+                      name:play
+                      callback:()=>{videoPlayCallback(main_videoslug)}
+                  }
+              ;
+              events.forEach(event=>{
+                video.addEventListener(event.nameevent.callback);
+              });
+
+            } function (err) {
+              var player = videojs(article-video);
+              player.createModal(Something went wrong. Please refresh the page to load the video.);
+            });
+
+            /*let video_date = main_videotime;
+            video_date = video_date.split("/");
+            video_date = formatDate(video_date2 video_date1 video_date0);
+
+            let share_section_content = `<div class="date-main">
+                <span>${video_date}</span>
+            </div>`;*/
+
+            let hasLikeBtn = false;
+
+            // console.log(share_section_content);
+            var data = {};
+
+            if(false){
+              try {
+                if((loginData && loginData.isLoggedIn == true)){
+                    const resp = await fetch(`${API_SCRIPT_URL}logged-in-video-details/${main_videoslug}/`{
+                    credentials: include
+                    })
+                    if(resp.status == 200 || resp.status == 201){
+                        data = await resp.json();
+                        share_section_content+= `<div class="share-icons-main">
+                            <div class="icon-div save-icon"><span class="save-icon-span" id="save-icon-span" onClick="saveVideo(${main_videoid} ${main_videoslug})">Save</span> <i id="video-save-btn" onClick="saveVideo(${main_videoid} ${main_videoslug})" data-save-status="${data.watchlist}" class="gfg-icon gfg-icon_bookmark"></i></div>
+                            <div class="icon-div like-icon"><span class="like-icon-span" id="like-icon-span" onClick="likeVideo(${main_videoid} ${main_videoslug})">Like</span> <i id="video-like-btn" onClick="likeVideo(${main_videoid} ${main_videoslug})" data-like-status="${data.liked}" class="gfg-icon gfg-icon_thumbs"></i></div>
+                        </div>`;
+                        hasLikeBtn = true;
+                    } else {
+                      share_section_content+= `<div class="share-icons-main">
+                            <div class="icon-div save-icon"><span class="save-icon-span" id="save-icon-span" onClick="saveVideo(${main_videoid} ${main_videoslug})">Save</span> <i id="video-save-btn" onClick="saveVideo(${main_videoid} ${main_videoslug})" class="gfg-icon gfg-icon_bookmark"></i></div>
+                            <div class="icon-div like-icon"><span class="like-icon-span" id="like-icon-span" onClick="likeVideo(${main_videoid} ${main_videoslug})">Like</span> <i id="video-like-btn" onClick="likeVideo(${main_videoid} ${main_videoslug})" class="gfg-icon gfg-icon_thumbs"></i></div>
+                        </div>`;
+                  }
+                } else {
+                      share_section_content+= `<div class="share-icons-main">
+                            <div class="icon-div save-icon"><span class="save-icon-span" id="save-icon-span" onClick="saveVideo(${main_videoid} ${main_videoslug})">Save</span> <i id="video-save-btn" onClick="saveVideo(${main_videoid} ${main_videoslug})" class="gfg-icon gfg-icon_bookmark"></i></div>
+                            <div class="icon-div like-icon"><span class="like-icon-span" id="like-icon-span" onClick="likeVideo(${main_videoid} ${main_videoslug})">Like</span> <i id="video-like-btn" onClick="likeVideo(${main_videoid} ${main_videoslug})" class="gfg-icon gfg-icon_thumbs"></i></div>
+                        </div>`;
+                }
+                
+                //Load share section
+                // $(".video-share-section").html(share_section_content);
+
+                // let exitCond = 0;
+
+                // const delay = (delayInms) => {
+                //   return new Promise(resolve => setTimeout(resolve delayInms));
+                // }
+
+                // while(!loginData){
+                //   let delayres =  await delay(1000);
+                //   exitCond+=1;
+                //   console.log(exitCond);
+                //   if(exitCond>5){
+                //     break;
+                //   }
+                // }
+                // console.log(loginData);
+                /*if(hasLikeBtn && loginData && loginData.isLoggedIn == true){
+                    setLiked(data.liked)
+                    setSaved(data.watchlist)
+                }*/
+                
+            } catch (error) {
+                console.log(error);
+            }
+            
+          }
+            
+          
+
+            //Load video content like title description
+            if(false){
+            $(".video-content-section").html(`
+              <div class="video-title">
+                ${main_videotitle}
+              </div>
+              <div class="video-description" id="video_id-${main_videoid}">
+                ${hideMainVideoDescription(main_videodescription main_videoid)}
+              </div>
+              ${getTagsString(main_videocategory)}
+                
+              ${(course_link.length)? `<div class="explore-all-btn-main">
+                  <a href="${course_link}"><span class="explore-all-btn">
+                    View Course <span class="gfg-icon gfg-icon_arrow-right_filled_navy_blue"></span>
+                  </span></a>
+              </div>`:}
+              
+            `);
+
+            let related_vidoes = main_videorecommendations;
+            
+            if(!!videos && videos.length>0){
+                //Load related videos
+                $(".related-videos-content").html(getvideosContent());
+            }
+            }
+            //show video content
+            element = document.getElementById(article-video-tab-content);
+            element.style.display = block;
+            $(.spinner-loading-overlay:eq(0)).remove();
+            $(.spinner-loading-overlay:eq(0)).remove();
+
+          }
+
+          await showMainVideoContent(video_data course_link);
+          // fitRelatedVideosDescription();
+        } catch (error) {
+          console.log(error);
+        }
+       
+      }
+      getVideoData();
+      
+      /* $(window).resize(function(){
+        onWidthChangeEventsListener();
+      });
+
+      $(#video_nav_tab).click(on function(){
+        fitRelatedVideosDescription();
+       });*/
+    });
+
+                                
+                                                        
+                                
+                                    Like Article
+                                    
+                                        
+                                        
+                                    
+                                
+                                
+                                    
+                                    
+                                        
+                                        Suggest improvement
+                                    
+                                
+                            
+                            
+                            
+                                                             
+                                    
+                                        Next
+                                        
+                                    
+                                    
+                                    
+                                        Get a list as input from user in Python
+                                    
+                                
+                                                        
+                            
+    
+        
+            Share your thoughts in the comments
+        
+        
+                Add Your Comment
+        
+                                
+            
+                
+                    
+                    
+                 
+                     Please Login to comment...

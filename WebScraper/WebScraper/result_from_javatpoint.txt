@@ -1,0 +1,921 @@
+next →
+← prev
+
+Java Tuple
+A tuple is a data structure that can hold objects of different types. These objects are not connected to each other but have meaning when we consider them collectively. In this section we discuss what is tuple features size and operations of tuples. Also we will discuss the tuple implementation in Java.
+What is a tuple?
+In general a tuple is an ordered collection of objects. In tuple data is stored as an object in a separate byte array. It has comma-separated values enclosed in a pair of square brackets . Tuples are immutable unlike Lists data structure. A tuple can hold multiple tuples. It can also be considered as an anonymous object.
+Features of Tuple
+Tuple has the following features:
+
+It is typesafe iterable immutable and serializable.
+It implements the toString() equals() and the hashCode()
+It also implements the Comparable (Tuple implements Comparable<Tuple>)
+
+Tuple Example
+Lets consider the following example.
+
+"Sophia" "Female" 22 "Marketing Manager"
+
+The above tuple is a quartet tuple because it has four elements (objects). We observe that each object is of a different type. But when we consider it collectively it has a specific meaning. The above tuple represents the data of an employee such as name gender age and designation.
+Lets see some other examples of tuples.
+
+"Java" "Object-oriented" 14
+"John" "Wick" 21 "USA" false "johnwick@gmail.com"
+3 "Samsung" "Galaxy S2" 37000.00
+
+Tuple in Java
+In Java a tuple is a generic data structure that treats each element as an object and these objects stores in a separate byte array. In other words we can also say that tuple is an ordered collection of objects of different types.
+The functionality of a tuple can be implemented using the List and Array data structure but these data structures do not hold different types of data types by design. Hence it is clear that heterogeneous tuple using a standard data structure (List/ Array) is not possible in Java. Since we required tuple data structure to fulfill the requirement of holding homogeneous data structure.
+Note that tuple data structure is not present in Java programming by default. But we can implement the tuple data structure by using the third-party library named javatuples.
+Before moving to the implementation first we will download the javatuples.jar file. And add this file to the path of the project.
+We can also use the following dependency in pom.xml file to implement the tuples data structure in Java.
+
+<dependency>
+<groupId>org.javatuples</groupId>
+<artifactId>javatuples</artifactId>
+<version>1.2</version>
+</dependency> 
+
+Lets implement a tuple and create a simple Java tuple program.
+Javatuples Library
+The javatuples library has the tuple classes that are corresponding to the size of a tuple. Tuples may be different in size. A tuple may hold a maximum of 10 elements. The implementation of each tuple is different. The class hierarchy is as follows.
+
+Java.lang.Object
+  ↳ org.javatuples.Tuple
+      ↳ org.javatuples.ClassName<>
+
+Java Tuple Class
+The Tuple is an abstract base class for all the tuple classes that belongs to org.javatuples package. All the methods of the tuple class are public and final. The following table summarizes the methods of the tuple class. It implements Iterable and Serializable interfaces.
+
+
+Method
+Syntax
+Description
+
+
+contains()
+public final boolean contains(java.lang.Object value)
+It checks if the tuple has specific element or not.
+
+
+containsAll()
+public final boolean containsAll(java.util.Collection<?> collection)
+It returns true if this tuple contains all of the elements of the specified collection (List/Array).
+
+
+equals()
+public final boolean equals(java.lang.Object obj)
+Overrides the equals() method of the Object class.
+
+
+getSize()
+public abstract int getSize()
+It returns the size of tuple.
+
+
+getValue()
+public final java.lang.Object getValue(int pos)
+Get the value at a specific position in the tuple. This method has to return object so using it you will lose the type-safety you get with the getValueX() methods.
+
+
+hashCode()
+public final int hashCode()
+It returns a hash code for the string. It overrides the hashCode() method of the Object class.
+
+
+indexOf()
+public final int indexOf(java.lang.Object value)
+It returns the index within this string of the first occurrence of the specified substring.
+
+
+iterator()
+public final java.util.Iterator<java.lang.Object> iterator()
+It returns an iterator over the elements in this tuple in proper sequence.
+
+
+lastIndexOf()
+public final int lastIndexOf(java.lang.Object value)
+It returns the index within this string of the last occurrence of the specified substring.
+
+
+toArray()
+public final java.lang.Object toArray()
+It converts the tuple into an array.
+
+
+toString()
+public final java.lang.String toString()
+It returns a string representation of the object. Overrides the toString() method of the Object class.
+
+
+toList()
+public final java.util.List<java.lang.Object> toList()
+It converts the tuple into a list.
+
+
+Direct Known Subclasses
+
+
+Size of Tuple
+Tuple Class Name
+Example
+
+
+One Element
+Unit
+Unit<1>
+
+
+Two Elements
+Pair
+Pair<12>
+
+
+Three Elements
+Triplet
+Triplet<123>
+
+
+Four Elements
+Quartet
+Quartet<1234>
+
+
+Five Elements
+Quintet
+Quintet<12345>
+
+
+Six Elements
+Sextet
+Sextet<123456>
+
+
+Seven Elements
+Septet
+Septet<1234567>
+
+
+Eight Elements
+Octet
+Octet<12345678>
+
+
+Nine Elements
+Ennead
+Ennead<123456789>
+
+
+Ten Elements
+Decade
+Decade<12345678910>
+
+
+Besides the above classes there are two additional classes provided by javatuples library i.e. KeyValue<A B> and LabelValue<A B>. These two classes are similar to the Pair class and provide the same functionality but in different semantics.
+Each tuple class implements the following three interfaces:
+
+Iterable
+Comparable
+Serializable
+
+Implementation of Tuple
+The implementation of a tuple in Java is very easy. We have to create an instance of tuple class that corresponds to size.
+TupleExample.java
+
+import org.javatuples.Quartet;
+public class TupleExample 
+{
+public static void main(String args) 
+{
+//create a pair tuple from the constructor
+Quartet quartet = new Quartet("Sophia" "Female" 22 "Marketing Manager");
+//print the tuples objects
+System.out.println("The details of the employee are: " + quartet);
+}
+}
+
+Output:
+
+The details of the employee are: Sophia Female 22 Marketing Manager
+
+Tuple Operations
+The following operations can be performed on a tuple:
+
+Creating a Tuple
+Getting Values
+Setting Values
+Adding Elements
+Iterate over Tuple
+Convert Tuple to List
+Searching in Tuple
+
+Creating Tuple
+There are three ways to create a tuple:
+
+By Using the with() Method
+By Using Constructor
+By Using Collection
+
+Lets see the above three ways to create a tuple.
+By Using the with() Method
+The javatuples library provides the with() method that creates a tuple with the specified values. The method belongs to the org.javatuples.Pair package. It is used to instantiate objects with values.
+Syntax:
+
+ClassName object = ClassName.with(value-1 value-2 ...... value-n);
+
+Example:
+
+Pair pair = Pair.with("iPhone 12" 112000.00);
+
+The above Pair class object creates a tuple with two values. Lets create a Java program for the same.
+CreateTupleExample1.java
+
+import org.javatuples.Pair;
+class CreateTupleExample1
+{
+public static void main(String args)
+{
+Pair pair = Pair.with(9086651 "Dell Laptop");
+System.out.println(pair);
+}
+}
+
+Output:
+
+9086651 Dell Laptop
+
+By Using Constructor
+In this case we create a constructor of the class according to requirement.
+Syntax:
+
+ClassName object = new ClassName (value-1 value-2 ……. value-n);
+
+Example:
+
+Quintet  quintet = new Quintet< Integer String Double String Integer> (91237 "Mac Book Air" 88490.00 "8-Core CPU" 4);
+
+Lets create a Java program to create a tuple using constructor.
+CreateTupleExample2.java
+
+import org.javatuples.Quintet;
+class CreateTupleExample1
+{
+public static void main(String args)
+{
+Quintet  quintet = new Quintet (91237 "Mac Book Air" 88490.00 "8-Core CPU" 4);
+System.out.println(quintet);
+}
+}
+
+Output:
+
+91237 Mac Book Air 88490.0 8-Core CPU 4
+
+By Using Collection
+The javatuples library allows us to create a tuple from the collection by using the fromCollection() method. It also allows us to create a tuple from an array by using the fromArray() method. Note that the collection/ array must have the same type and values as the tuple.
+The collection/array must have the same type as the Tuple and the number of values in the collection/ array must match the Tuple class.
+Syntax:
+
+ClassName  object = ClassName.fromCollection(list);
+ClassName  object = ClassName.fromArray(array);
+
+Example:
+
+Octet p1 = Octet.fromCollection(list);
+Sextet p2 = Sextet.fromArray(arr);
+
+CreateTupleExample3.java
+
+import java.util.ArrayList;
+import java.util.List;
+import org.javatuples.Sextet;
+import org.javatuples.Octet;
+class CreateTupleExample3 
+{
+public static void main(String args)
+{
+//creating a list
+List list = new ArrayList();
+//adding elements to the list
+list.add("C");
+list.add("C++");
+list.add("Java");
+list.add("Python");
+list.add("Scala");
+list.add("Ruby");
+list.add("PHP");
+list.add("COBOL");
+//creating an object of Pair class and passing the list
+Octet p1 = Octet.fromCollection(list);
+//creating an Array
+String arr = {"One" "Two" "Three" "Four" "Five" "Six"};
+//creating an object of the Pair class and invoking the fromArray() method 
+Sextet p2 = Sextet.fromArray(arr);
+//prints the tuple created using list
+System.out.println(p1);
+//prints the tuple using Array
+System.out.println(p2);
+}
+}
+
+Output:
+
+C C++ Java Python Scala Ruby PHP COBOL
+One Two Three Four Five Six
+
+Get values
+The javatuples library also allows us to fetch values from the tuple at the specified index by using the getValueX() method. Where X denotes the index value of the object. Indexing starts from 0.
+Example:
+
+Pair pair = new Pair(value-1 value-2);
+type1 val1 = pair.getValue0();
+
+GetValueExample.java
+
+import org.javatuples.Pair;
+class GetTupleValue
+{
+public static void main(String args)
+{
+//creating a tuple
+Pair pair = Pair.with(12 "Andrew");
+//getting values at index 1 
+System.out.println(pair.getValue1());
+}
+}
+
+Output:
+
+Andrew
+
+Set values
+As we discussed above tuples are immutable. Hence they cannot be modified once they are created. To overcome the problem javatuples library provides the setValueX() method. Where X is the index value at which we want to set the specific value. The method creates a copy of the tuple with the newly added value at the specified index and returns the same tuple.
+Example:
+
+Pair pair = new Pair(value-1 value-2);
+type1 val1 = pair.getValue0();
+
+SetValueExample.java
+
+import org.javatuples.Pair;
+class SetTupleValue 
+{
+public static void main(String args)
+{
+//creating a tuple
+Pair p1 = Pair.with(67 69);
+//setting tuple value at index 1
+Pair p2 = p1.setAt1(68);
+System.out.println(p2);
+}
+}
+
+Output:
+
+67 68
+
+Adding a Value
+There are two ways to add values in a tuple:
+
+At the end of the tuple
+At specific Index
+
+At the end of the Tuple
+The javatuples library provides the add() method to add objects to the tuple. It adds the object at the end of the tuple and returns a new tuple by matching the number of elements.
+Suppose we have a tuple having two elements and we want to add another element to the tuple. In such a case the Pair tuple will not support the third element. Therefore when we add an element to a Pair tuple it gets converted into a Triplet tuple. Lets see an example.
+AddElementInTuple.java
+
+import org.javatuples.Pair;
+import org.javatuples.Triplet;
+public class AddElementInTuple 
+{
+public static void main(String args)
+{
+Pair pair = Pair.with("Jack" 46);
+Triplet triplet = pair.add("Finance Professional");
+System.out.println(pair);
+System.out.println(triplet);
+}
+}
+
+Output:
+
+Jack 46
+Jack 46 Finance Professional
+
+We can also add one tuple to another tuple. It increases the number of elements in the newly generated tuple. Hence it returns the type of tuple based on the number of elements present after addition.
+AddTuplesExample.java
+
+import org.javatuples.Quartet;
+import org.javatuples.Septet;
+import org.javatuples.Triplet;
+public class AddTuplesExample 
+{
+public static void main(String args)
+{
+//creating a tuple with three elements
+Triplet triplet = Triplet.with("Mango" "Grapes" "Papaya");
+//creating an object of quartet tuple and adding an elements at index-1 in triplet tuple
+Quartet quartet = triplet.addAt1("Banana");
+//adding quartet and triplet tuple we get a septet tuple i.e. 3+4=7 
+//the following statement can be written as Septet septet = quartet.add(triplet);   
+Septet septet = quartet.add(triplet);   
+System.out.println(triplet);
+System.out.println(quartet);
+System.out.println(septet);
+}
+}
+
+Output:
+
+Mango Grapes Papaya
+Mango Banana Grapes Papaya
+Mango Banana Grapes Papaya Mango Grapes Papaya
+
+At Specified Index
+By default new elements are added at the end of the tuple. But we can add elements at the specified index by using the addX() method.
+AddAtIndexExample.java
+
+import org.javatuples.Quartet;
+import org.javatuples.Triplet;
+public class AddAtIndexExample 
+{
+public static void main(String args)
+{
+//creating a tuple with three elements
+Triplet triplet = Triplet.with("MCA" "M.Sc." "MBBS");
+//creating an object of quartet tuple and adding an element at index-2 in triplet tuple
+Quartet quartet = triplet.addAt2("M.Tech");
+System.out.println(triplet);
+System.out.println(quartet);
+}
+}
+
+Output:
+
+MCA M.Sc. MBBS
+MCA M.Sc. M.Tech MBBS
+
+Searching an Element
+We can also search for an element that resides in the tuple. For searching javatuples library provides the contains() method of the Tuple class. It returns a Boolean value true if an element is present else returns false. Lets see an example.
+SearchingElementExample.java
+
+import org.javatuples.Pair;
+class SearchingElementExample
+{
+public static void main(String args)
+{
+Pair pair = Pair.with(34 "Jack");
+//returns true because Jack is present in tuple
+boolean res1 = pair.contains("Jack");
+//returns false because Andrew is not present in tuple 
+boolean res2 = pair.contains("Andrew");
+System.out.println(res1);
+System.out.println(res2);
+}
+}
+
+Output:
+
+true
+false
+
+Convert Tuple to Collection or Array
+Each tuple class has asList() and toArray() methods that returns List and Array respectively. Lets see an example.
+TupleToCollection.java
+
+import java.util.Arrays;
+import java.util.List;
+import org.javatuples.Quartet;
+public class TupleToCollection 
+{
+public static void main(String args)
+{
+//Convert to list
+Quartet<String Integer String Double> quartet = Quartet.with("Dog" 12"German Shepherd" 23.89);
+//converts to list
+List<Object> list = quartet.toList();
+//prints list
+System.out.println(list);
+//Converts to array
+Object quartletArr = quartet.toArray();
+//prints array
+System.out.println(Arrays.toString(quartletArr));
+}
+}
+
+Output:
+
+Dog 12 German Shepherd 23.89
+Dog 12 German Shepherd 23.89
+
+Note that tuple can contain heterogeneous types so the resulting type will be of List<Object> or Object accordingly.
+Iteration Over Tuple
+All the tuple classes implement the Iterable interface. So we can iterate a tuple in the same way as collections or arrays.
+IterateTuple.java
+
+import org.javatuples.Quartet;
+class IterateTuple 
+{
+public static void main(String args)
+{
+//creating a quartet tuple
+Quartet quartet = Quartet.with("Dell" 5600.00 34 "Digital Solutions");
+//iterate over tuple
+for(Object obj : quartet) 
+{
+//prints elements
+System.out.println(obj);
+}
+}
+}
+
+Output:
+
+Dell
+5600.0
+34
+Digital Solutions
+
+Tuple Vs. List/Array
+
+
+
+
+Tuple
+List
+
+
+It is a set of comma-separated values that are enclosed in parenthesis.
+It is a set of comma-separated values that are enclosed in square brackets.
+
+
+Parenthesis is optional.
+Square brackets are mandatory.
+
+
+It is immutable.
+It is mutable.
+
+
+It requires less memory.
+It requires more memory.
+
+
+It has fewer factory methods.
+It has more factory methods.
+
+
+It has a fixed length.
+It has variable lengths.
+
+
+It stores heterogeneous data.
+It stores homogeneous data.
+
+
+It is suitable for large amounts of data.
+It is suitable for a small amount of data.
+
+
+It can be stored in a list.
+It can be stored inside a tuple.
+
+
+It is faster in comparison to List.
+It is slower in comparison to the tuple.
+
+
+It is represented as t1 = (1 2 3 4 5)
+It is represented as l1 = 1 2 3 4 5
+
+
+
+
+Next TopicDijkstra Algorithm Java
+
+
+
+
+← prev
+next →
+
+
+
+
+
+
+
+ For Videos Join Our Youtube Channel:  Join Now
+
+
+Feedback
+
+Send your Feedback to email protected
+
+
+Help Others Please Share
+
+
+
+
+
+
+
+Learn Latest Tutorials
+
+
+
+Splunk
+
+
+
+
+SPSS
+
+
+
+
+Swagger
+
+
+
+
+Transact-SQL
+
+
+
+
+Tumblr
+
+
+
+
+ReactJS
+
+
+
+
+Regex
+
+
+
+
+Reinforcement Learning
+
+
+
+
+R Programming
+
+
+
+
+RxJS
+
+
+
+
+React Native
+
+
+
+
+Python Design Patterns
+
+
+
+
+Python Pillow
+
+
+
+
+Python Turtle
+
+
+
+
+Keras
+
+
+
+
+
+
+
+Preparation
+
+
+
+Aptitude
+
+
+
+
+Reasoning
+
+
+
+
+Verbal Ability
+
+
+
+
+Interview Questions
+
+
+
+
+Company Questions
+
+
+
+
+
+
+
+Trending Technologies
+
+
+
+Artificial Intelligence
+
+
+
+
+AWS
+
+
+
+
+Selenium
+
+
+
+
+Cloud Computing
+
+
+
+
+Hadoop
+
+
+
+
+ReactJS
+
+
+
+
+Data Science
+
+
+
+
+Angular 7
+
+
+
+
+Blockchain
+
+
+
+
+Git
+
+
+
+
+Machine Learning
+
+
+
+
+DevOps
+
+
+
+
+
+
+
+B.Tech / MCA
+
+
+
+DBMS
+
+
+
+
+Data Structures
+
+
+
+
+DAA
+
+
+
+
+Operating System
+
+
+
+
+Computer Network
+
+
+
+
+Compiler Design
+
+
+
+
+Computer Organization
+
+
+
+
+Discrete Mathematics
+
+
+
+
+Ethical Hacking
+
+
+
+
+Computer Graphics
+
+
+
+
+Software Engineering
+
+
+
+
+Web Technology
+
+
+
+
+Cyber Security
+
+
+
+
+Automata
+
+
+
+
+C Programming
+
+
+
+
+C++
+
+
+
+
+Java
+
+
+
+
+.Net
+
+
+
+
+Python
+
+
+
+
+Programs
+
+
+
+
+Control System
+
+
+
+
+Data Mining
+
+
+
+
+Data Warehouse
